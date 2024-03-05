@@ -107,7 +107,7 @@
         "h2 {width: 100%; text-align: center;}",
         ".card-wrapper {padding: 0.75rem;}",
         ".card__inner {background-color: transparent;}",
-        ".card__media .media {border-radius: 50%; border: 1px solid #9cc5c9;}",
+        ".card__media .media {border-radius: 8px; border: 1px solid #121212;}",
         ".card__heading {text-align: center; font-size: 1.25rem;}",
         ".card__heading .icon-wrap {display: none;}"
       ],
