@@ -61,26 +61,47 @@
         "featured_collection_N9gBpq": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "convertible-cribs"
           }
         },
         "featured_collection_mcaWKa": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "dressers-chests"
           }
         },
         "featured_collection_W4wtHK": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "night-stands"
+          }
+        },
+        "featured_collection_ziTGMw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "toddler-beds"
+          }
+        },
+        "featured_collection_wUe7JB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mattresses"
+          }
+        },
+        "featured_collection_UQXqGt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gliders-recliners"
           }
         }
       },
       "block_order": [
         "featured_collection_N9gBpq",
         "featured_collection_mcaWKa",
-        "featured_collection_W4wtHK"
+        "featured_collection_W4wtHK",
+        "featured_collection_ziTGMw",
+        "featured_collection_wUe7JB",
+        "featured_collection_UQXqGt"
       ],
       "custom_css": [
         "h2 {width: 100%; text-align: center;}",
