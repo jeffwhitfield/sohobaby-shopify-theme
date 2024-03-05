@@ -3543,7 +3543,7 @@ details-disclosure > details {
   object-fit: cover;
 }
 .callout-soho-logo img {
-  width: 250px;
+  width: 200px;
   height: auto;
 }
 .callout-soho-text {
@@ -3554,7 +3554,7 @@ details-disclosure > details {
   flex-direction: column;
 }
 .callout-soho-text p {
-  color: #ffffff;
+  color: #131313;
   text-align: center;
   margin: 0;
   margin-bottom: 1rem;
