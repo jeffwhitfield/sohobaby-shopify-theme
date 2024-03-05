@@ -3520,7 +3520,7 @@ details-disclosure > details {
 
 /* Custom Callouts */
 .callout-soho {
-  background-image: linear-gradient(to right, #ffffff, #001730);
+  background-image: linear-gradient(to right, #ffffff, #82B4BD);
   display: flex;
   flex-direction: row;
   text-decoration: none;
