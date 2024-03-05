@@ -82,11 +82,20 @@
         "featured_collection_mcaWKa",
         "featured_collection_W4wtHK"
       ],
+      "custom_css": [
+        "h2 {width: 100%; text-align: center;}",
+        ".card-wrapper {padding: 0.75rem;}",
+        ".card__inner {background-color: transparent;}",
+        ".card__media .media {border-radius: 50%; border: 1px solid #9cc5c9;}",
+        ".card__heading {text-align: center; font-size: 1.25rem;}",
+        ".card__heading .icon-wrap {display: none;}",
+        ".card--media {padding-top: 36%; background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/collection-list-item-background.png?v=1695951623); background-size: 96%; background-repeat: no-repeat; background-position: 2px 6px;}"
+      ],
       "settings": {
-        "title": "Collections",
+        "title": "Nursery Essentials",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 5,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",
