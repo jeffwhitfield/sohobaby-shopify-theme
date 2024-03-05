@@ -60,9 +60,10 @@ slideshow-component .slideshow.banner {
   padding: 0 1rem 0 0!important;
 }
 .slideshow__text.banner__box {
-  background-color: #82b4bd !important;
+  background-color: #333333 !important;
   outline: 1px solid #ffffff;
   outline-offset: -1rem;
+  border-radius: 8px;
 }
 .slideshow__text.banner__box h2, .slideshow__text.banner__box p {
   color: #ffffff;
