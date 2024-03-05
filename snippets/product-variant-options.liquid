@@ -55,12 +55,23 @@
       {% if option.selected_value == value %}
         checked
       {% endif %}
-      {% if option_disabled %}
+      {% if option_disabled and product.metafields.custom.retailer_exclusive_url == String.Empty %}
         class="disabled"
       {% endif %}
     >
+
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-      {{ value -}}
+      {% if value != 'Standard' and value != 'Default' and value != 'Default Title' %}
+        <span class="swatch">
+          <img
+            src="https://oxfordbabyandkids.com/assets/Swatches/{{ value | downcase | replace: ' ', '-' }}.png"
+            alt="{{ value -}}"
+          >
+        </span>
+        <span class="swatch-value">{{ value -}}</span>
+      {% else %}
+        <span class="swatch-value no-swatch">{{ value -}}</span>
+      {% endif %}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}

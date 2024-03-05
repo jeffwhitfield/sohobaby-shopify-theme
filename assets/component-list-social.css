@@ -1,7 +1,7 @@
 .list-social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 @media only screen and (max-width: 749px) {
@@ -19,7 +19,7 @@
   align-items: center;
   display: flex;
   padding: 1.1rem;
-  color: rgb(var(--color-foreground));
+  color: #9c2429;
 }
 
 .utility-bar .list-social__link {

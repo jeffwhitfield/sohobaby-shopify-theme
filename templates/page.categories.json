@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-categories",
+      "settings": {
+        "title": "Categories",
+        "sort": "alphabetical",
+        "image_ratio": "square"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

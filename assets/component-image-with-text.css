@@ -29,6 +29,17 @@
   height: 43.5rem;
 }
 
+.image-with-text__media img {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto !important;
+  width: 100%;
+}
+
+
 @media screen and (min-width: 750px) {
   .image-with-text__media--small {
     height: 31.4rem;
@@ -88,9 +99,17 @@
   justify-content: center;
   align-self: center;
   padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+  padding-top: 0 !important;
   position: relative;
   z-index: 1;
 }
+
+@media screen and (max-width: 749px) {
+  .image-with-text__content {
+    padding-top: 2rem !important;
+  }
+}
+
 
 .image-with-text .grid__item::after {
   content: '';
@@ -407,11 +426,86 @@
 .multirow__inner {
   display: flex;
   flex-direction: column;
-  row-gap: var(--grid-mobile-vertical-spacing);
+  row-gap: none;
+}
+.multirow__inner .image-with-text {
+  margin-bottom: 0;
+}
+.multirow__inner .image-with-text:first-child .image-with-text__text-item {
+  background-image: url(https://cdn.shopify.com/s/files/1/0782/4392/2232/files/multirow-background-green.jpg?v=1696616080);
+  color: #ffffff;
+}
+.multirow__inner .image-with-text:first-child .image-with-text__media {
+  position: relative;
+}
+.multirow__inner .image-with-text:first-child .image-with-text__media:after {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 100px;
+  height: 134px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0782/4392/2232/files/greenguard-logo.png?v=1696818991);
+  background-size: 100%;
+  z-index: 99;
+}
+
+.multirow__inner .image-with-text:first-child .image-with-text__text-item h2 {
+  color: #ffffff;
+}
+.multirow__inner .image-with-text:nth-child(2n+2) .image-with-text__text-item {
+  background-image: url(https://cdn.shopify.com/s/files/1/0782/4392/2232/files/multirow-background-white.jpg?v=1696616080);
+}
+.multirow__inner .image-with-text:nth-child(2n+2) .image-with-text__content {
+  padding-left: 6rem !important;
+}
+.multirow__inner .image-with-text:nth-child(2n+2) h2 {
+  width: 100%;
+  text-align: center;
+}
+.multirow__inner .image-with-text:nth-child(2n+2) a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.multirow__inner .image-with-text:nth-child(3n+3) .image-with-text__text-item {
+  background-image: url(https://cdn.shopify.com/s/files/1/0782/4392/2232/files/multirow-background-brown.jpg?v=1696616080);
+  color: #ffffff;
+}
+.multirow__inner .image-with-text:nth-child(3n+3) .image-with-text__text-item h2 {
+  color: #ffffff;
+}
+.multirow__inner .image-with-text:nth-child(3n+3) .image-with-text__content {
+  text-align: center;
+  padding-right: 6rem !important;
+}
+.multirow__inner .image-with-text ul {
+  padding-left: 0;
+}
+.multirow__inner .image-with-text ul li {
+	margin: 0;
+	padding-left: 2.5rem;
+	list-style: none;
+	background-image: url("https://cdn.shopify.com/s/files/1/0782/4392/2232/files/icon-checkbox.png?v=1696875513");
+	background-repeat: no-repeat;
+	background-position: left 6px;
+	background-size: 1.5rem;
+
 }
 
 @media screen and (min-width: 750px) {
   .multirow__inner {
-    row-gap: var(--grid-desktop-vertical-spacing);
+    row-gap: none;
+  }
+  .multirow__inner .image-with-text:first-child .image-with-text__content {
+    padding-right: 2rem !important;
+  }
+
+}
+
+@media screen and (max-width: 749px) {
+  .multirow__inner  .image-with-text__content {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
   }
 }
+
