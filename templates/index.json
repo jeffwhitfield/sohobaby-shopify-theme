@@ -1,210 +1,180 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_m8cQjN": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_VfRAdR": {
+          "type": "slide",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
           }
         },
-        "text": {
-          "type": "text",
+        "slide_irEDpw": {
+          "type": "slide",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "slide_VfRAdR",
+        "slide_irEDpw"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "collection_list_homepage_RhjVjw": {
+      "type": "collection-list-homepage",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "featured_collection_N9gBpq": {
+          "type": "featured_collection",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "collection": ""
           }
         },
-        "text": {
-          "type": "text",
+        "featured_collection_mcaWKa": {
+          "type": "featured_collection",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "collection": ""
+          }
+        },
+        "featured_collection_W4wtHK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "featured_collection_N9gBpq",
+        "featured_collection_mcaWKa",
+        "featured_collection_W4wtHK"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_KCh78n": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<a href=\"https:\/\/sohobaby.com\" target=\"_blank\" class=\"callout-soho\">\n    <div class=\"callout-soho-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/homepage-safety-callout-image.jpg?v=1696820928\">\n    <\/div>\n    <div class=\"callout-soho-logo\">\n        <div class=\"callout-soho-logo-container\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/callout-soho-logo.png?v=1696620403\">\n        <\/div>\n    <\/div>\n    <div class=\"callout-soho-text\">\n        <p>Check out our Soho Baby line of baby furniture for more options!<\/p>\n        <p class=\"uppercase\">Visit the website<\/p>\n    <\/div>\n<\/a>",
+        "color_scheme": "",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "custom_liquid_4UU9e9": {
+      "type": "custom-liquid",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
+        "custom_liquid": "<div class=\"callout-safety\">\n    <div class=\"callout-safety-logos callout-safety-logos-end\">\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/astm-logo.png?v=1696818991\">\n      <\/div>\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/cpsc-logo.png?v=1696818993\">\n      <\/div>\n    <\/div>\n    <div class=\"callout-safety-text\">\n        <p>Superior Quality,\nSafety & Craftsmanship<\/p>\n        <p class=\"uppercase\">The Highest Industry Standards<\/p>        \n    <\/div>\n    <div class=\"callout-safety-logos callout-safety-logos-start\">\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/bureau-veritas-logo.png?v=1696818991\">\n      <\/div>\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/greenguard-logo.png?v=1696818991\">\n      <\/div>\n    <\/div>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
-    "collage": {
-      "type": "collage",
+    "multirow_KKGphX": {
+      "type": "multirow",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "row_DqHHYR": {
+          "type": "row",
           "settings": {
-            "collection": ""
+            "image": "shopify:\/\/shop_images\/home-safer-for-baby.jpg",
+            "caption": "",
+            "heading": "Safer for baby and home",
+            "text": "<p>All of our Cribs are GREENGUARD Gold Certified, ensuring that your nursery is a healthy space for your little one.<\/p><ul><li>Screened for 10,000 chemical compounds and VOC’s<\/li><li>Rigorously Tested & Approved<\/li><li>Cleaner Indoor Air<\/li><li>Promotes healthier breathing environment<\/li><\/ul>",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "product": {
-          "type": "product",
+        "row_kAcjfq": {
+          "type": "row",
           "settings": {
-            "product": "",
-            "second_image": false
+            "image": "shopify:\/\/shop_images\/home-newest-collection.jpg",
+            "caption": "",
+            "heading": "Discover Our Newest Collection",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify:\/\/collections"
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "row_3kkwAy": {
+          "type": "row",
           "settings": {
-            "collection": ""
+            "image": "shopify:\/\/shop_images\/home-grows-with-your-baby.jpg",
+            "caption": "",
+            "heading": "Grows With Your Baby",
+            "text": "<p>Our cribs easily convert to a toddler bed, day bed and a full-size bed.<\/p>",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "row_DqHHYR",
+        "row_kAcjfq",
+        "row_3kkwAy"
       ],
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "image_height": "medium",
+        "desktop_image_width": "medium",
         "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "slideshow_m8cQjN",
+    "collection_list_homepage_RhjVjw",
+    "custom_liquid_KCh78n",
+    "custom_liquid_4UU9e9",
+    "multirow_KKGphX"
   ]
 }
