@@ -1,12 +1,12 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/soho-baby-logo_2x_8b866048-b8f0-4612-83ab-64a136a0c4b0.png",
-    "logo_width": 160,
+    "logo": "shopify:\/\/shop_images\/soho-baby-logo.png",
+    "logo_width": 140,
     "favicon": "shopify:\/\/shop_images\/favicon-32x32_2361cace-61d7-4bec-ac3f-fe492213b83d.png",
     "type_header_font": "assistant_n4",
-    "heading_scale": 100,
+    "heading_scale": 110,
     "type_body_font": "assistant_n4",
-    "body_scale": 100,
+    "body_scale": 110,
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
@@ -113,6 +113,8 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/soho-baby-logo.png",
+    "checkout_logo_size": "large",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -177,11 +179,11 @@
       },
       "accent-2": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#6f78ac",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#334fb4",
+          "button_label": "#6f78ac",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
@@ -373,5 +375,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".has-text-white {color: #ffffff !important;}"
+    ]
   }
 }
