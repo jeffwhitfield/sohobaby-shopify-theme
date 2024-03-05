@@ -1392,8 +1392,8 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button.button-primary {
-  background-color: #9c2429;
-  border-color: #9c2429;
+  background-color: #6F78AC;
+  border-color: #6F78AC;
   color: #ffffff;
 }
 /* Button - social share */
@@ -2547,7 +2547,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icon {
-  color: #9c2429;
+  color: #6F78AC;
 }
 
 .header__icon span {
