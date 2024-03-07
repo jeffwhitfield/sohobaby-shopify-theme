@@ -177,7 +177,7 @@
     "custom_liquid_KCh78n": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<a href=\"https:\/\/oxfordbabyandkids.com\" target=\"_blank\" class=\"callout-soho\">\n    <div class=\"callout-soho-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/homepage-safety-callout-image.jpg?v=1696820928\">\n    <\/div>\n    <div class=\"callout-soho-logo\">\n        <div class=\"callout-soho-logo-container\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0580\/0846\/9573\/files\/oxford-baby-logo.png?v=1709612819\">\n        <\/div>\n    <\/div>\n    <div class=\"callout-soho-text\">\n        <p>Check out our Oxford Baby line of baby furniture for more options!<\/p>\n        <p class=\"uppercase\">Visit the website<\/p>\n    <\/div>\n<\/a>",
+        "custom_liquid": "<a href=\"https:\/\/oxfordbabyandkids.com\" target=\"_blank\" class=\"callout-soho\">\n    <div class=\"callout-soho-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0580\/0846\/9573\/files\/oxford_banner_-_london_lane_1.jpg?v=1709837266\">\n    <\/div>\n    <div class=\"callout-soho-logo\">\n        <div class=\"callout-soho-logo-container\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0580\/0846\/9573\/files\/oxford-baby-logo.png?v=1709612819\">\n        <\/div>\n    <\/div>\n    <div class=\"callout-soho-text\">\n        <p>Check out our Oxford Baby line of baby furniture for more options!<\/p>\n        <p class=\"uppercase\">Visit the website<\/p>\n    <\/div>\n<\/a>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
