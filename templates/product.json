@@ -62,9 +62,9 @@
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
+            "heading": "Item Details",
             "icon": "ruler",
-            "content": "",
+            "content": "<p><strong>Assembled Dimensions: <br\/><\/strong>{{ product.metafields.custom.assembled_dimensions.value }}<\/p><p><strong>Assembled Weight: <br\/><\/strong>{{ product.metafields.custom.assembled_weight.value }} lb.<\/p><p><strong>Carton Dimensions:<br\/><\/strong>{{ product.metafields.custom.dimensions.value }}<\/p><p><strong>Carton Weight:<br\/><\/strong>{{ product.metafields.custom.carton_weight.value }} lb.<\/p>",
             "page": ""
           }
         },
