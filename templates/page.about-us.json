@@ -13,14 +13,14 @@
         "template--20959280038200__dfe789da-ddc4-47c2-9de7-95d53423c17e-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "About Oxford Baby",
+            "heading": "About Soho Baby",
             "heading_size": "h2"
           }
         },
         "template--20959280038200__dfe789da-ddc4-47c2-9de7-95d53423c17e-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>At Oxford Baby, we are dedicated to providing safe, high-quality nursery furniture for your little one. Oxford Baby is a division of the parent company M Design Village who also owns the premium brand, Soho Baby. With over 30 years of experience designing and manufacturing baby furniture, Oxford Baby helps parents create unique, stylish, and safe nurseries every day. Each collection is crafted from the finest materials to ensure countless years of special memories.<\/p><p>Oxford Baby provides furniture that moms love, families cherish, and competitors strive toward. Our unique designs enable you to create your perfect nursery, as well as memories that will last a lifetime.<\/p>",
+            "text": "<p>At Soho Baby, we are dedicated to providing safe, high-quality nursery furniture for your little one. Soho Baby is a division of the parent company M Design Village who also owns the premium brand, Soho Baby. With over 30 years of experience designing and manufacturing baby furniture, Soho Baby helps parents create unique, stylish, and safe nurseries every day. Each collection is crafted from the finest materials to ensure countless years of special memories.<\/p><p>Soho Baby provides furniture that moms love, families cherish, and competitors strive toward. Our unique designs enable you to create your perfect nursery, as well as memories that will last a lifetime.<\/p>",
             "text_style": "body"
           }
         }
@@ -30,7 +30,7 @@
         "template--20959280038200__dfe789da-ddc4-47c2-9de7-95d53423c17e-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/MDV_Building.jpg",
+        "image": "shopify:\/\/shop_images\/MDV_Building.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -76,7 +76,7 @@
         "template--20502729654584__ab6a155b-ac82-498a-ab50-f6155b912ece-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/ul-greenguard-gold-vector-logo_3458a461-c5c4-40b3-a9de-312e4fe2e8ac.png",
+        "image": "shopify:\/\/shop_images\/ul-greenguard-gold-vector-logo_3458a461-c5c4-40b3-a9de-312e4fe2e8ac.webp",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -103,7 +103,7 @@
         "template--20502729654584__94da3d73-588b-457e-b382-97922e76f505-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>The safety of your baby is our #1 Priority here at Oxford Baby. All Oxford Baby products are tested by a 3rd party certified lab for Consumer Safety Products Commission (CPSC) and American Society for Testing <br\/>and Materials (ASTM) standards. <br\/>All our nursery dressers feature safety stop drawer mechanism ensuring your child’s safety.<\/p><p>Additionally, all of our dressers come with wall anchoring kits to prevent furniture tip-overs. Further, we use materials that are carefully inspected for quality & cleanliness and are low-impact to the environment; additionally, our finishes are baby-safe and designed to promote healthy air environments.<br\/><\/p>",
+            "text": "<p>The safety of your baby is our #1 Priority here at Soho Baby. All Soho Baby products are tested by a 3rd party certified lab for Consumer Safety Products Commission (CPSC) and American Society for Testing and Materials (ASTM) standards. All our nursery dressers feature safety stop drawer mechanism ensuring your child’s safety.<\/p><p>Additionally, all of our dressers come with wall anchoring kits to prevent furniture tip-overs. Further, we use materials that are carefully inspected for quality & cleanliness and are low-impact to the environment; additionally, our finishes are baby-safe and designed to promote healthy air environments.<br\/><\/p>",
             "text_style": "body"
           }
         },
@@ -122,7 +122,7 @@
         "template--20502729654584__94da3d73-588b-457e-b382-97922e76f505-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/safety-logos.png",
+        "image": "shopify:\/\/shop_images\/safety-logos_1bf10be5-d165-4521-a385-f4cd399e619d.webp",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -149,7 +149,7 @@
         "template--20502729654584__5fb8316d-bef5-4136-8137-898d72aa1eca-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Create a quality nursery for your baby while feeling good about protecting the environment. Here at Oxford Baby, we are dedicated to caring for our planet, our communities, and local forests.<\/p><p>We proudly work with partners who adhere to higher environmental standards and we use recyclable materials wherever possible in the development and manufacturing of our products. We use renewable wood that comes from sustainably managed forests, creating new trees while protecting the local environment.<br\/>At Oxford Baby we are committed to preserving the planet for future generations.<\/p>",
+            "text": "<p>Create a quality nursery for your baby while feeling good about protecting the environment. Here at Soho Baby, we are dedicated to caring for our planet, our communities, and local forests.<\/p><p>We proudly work with partners who adhere to higher environmental standards and we use recyclable materials wherever possible in the development and manufacturing of our products. We use renewable wood that comes from sustainably managed forests, creating new trees while protecting the local environment.<\/p><p>At Soho Baby we are committed to preserving the planet for future generations.<\/p>",
             "text_style": "body"
           }
         },
@@ -168,7 +168,7 @@
         "template--20502729654584__5fb8316d-bef5-4136-8137-898d72aa1eca-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/sustainability-callout.jpg",
+        "image": "shopify:\/\/shop_images\/sustainability-callout_f32be568-9975-432b-94e4-0e40eb56a060.webp",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -195,7 +195,7 @@
         "template--20502729654584__27218630-0147-40e0-a690-978f9748e4a6-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our products feature beautiful designs, aesthetics, and architecture. Additionally, our furniture is made from sustainable kiln-dried solid wood and veneers for strength, durability, and fine texture. We take pride in our exceptional craftsmanship and high-quality products.<\/p><p>High quality nursery furniture creates peace of mind and makes life easier for parents. We proudly use Solid Wood and Veneers to produce all of our nursery furniture for sturdiness and durability. The wood we use is hand-selected and kiln-dried to create hardness and prevent cracks. Additionally, our finishes are produced through a multi-step hand-rubbed process by fine wood artisans. <\/p><p>Our dressers feature under mount or side mount drawer glides with an English Dovetail or French Dovetail drawer construction. <\/p><p>At Oxford Baby we ensure that you get the best for your bundle of joy .<br\/><\/p>",
+            "text": "<p>Our products feature beautiful designs, aesthetics, and architecture. Additionally, our furniture is made from sustainable kiln-dried solid wood and veneers for strength, durability, and fine texture. We take pride in our exceptional craftsmanship and high-quality products.<\/p><p>High quality nursery furniture creates peace of mind and makes life easier for parents. We proudly use Solid Wood and Veneers to produce all of our nursery furniture for sturdiness and durability. The wood we use is hand-selected and kiln-dried to create hardness and prevent cracks. Additionally, our finishes are produced through a multi-step hand-rubbed process by fine wood artisans. <\/p><p>Our dressers feature under mount or side mount drawer glides with an English Dovetail or French Dovetail drawer construction. <\/p><p>At Soho Baby we ensure that you get the best for your bundle of joy .<br\/><\/p>",
             "text_style": "body"
           }
         }
