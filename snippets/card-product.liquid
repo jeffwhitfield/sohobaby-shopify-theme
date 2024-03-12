@@ -129,7 +129,7 @@
               >
                 {{- 'products.product.sold_out' | t -}}
               </span>
-              <!--
+              {% comment %}
                 {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
                 <span
                   id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -137,7 +137,7 @@
                 >
                   {{- 'products.product.on_sale' | t -}}
                 </span>
-              -->
+              {% endcomment %}
             {%- elsif card_product.metafields.custom.retailer_exclusive_url -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -364,15 +364,15 @@
             >
               {{- 'products.product.sold_out' | t -}}
             </span>
-            <!--
+            {% comment %}
               {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-              <span
-                id="Badge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-              >
-                {{- 'products.product.on_sale' | t -}}
-              </span>
-            -->
+                <span
+                  id="Badge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                >
+                  {{- 'products.product.on_sale' | t -}}
+                </span>
+            {% endcomment %}
           {%- endif -%}
         </div>
       </div>
