@@ -145,7 +145,7 @@
               >
                 Retailer Exclusive
               </span>
-            {%- elsif card_product.tags contains 'Clearance' -%}
+            {%- elsif card_product.tags contains 'Clearance' or card_product.tags contains 'clearance' -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
