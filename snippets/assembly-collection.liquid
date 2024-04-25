@@ -14,7 +14,7 @@
     {%- for product in collection.products -%}
       {%- if product.metafields.custom.assembly_instructions_1_url -%}
         <div class="assembly-product">
-          <h3>{{- product.title -}} {{- product.status -}}</h3>
+          <h3>{{- product.title -}}</h3>
           {%- if product.metafields.custom.assembly_instructions_1_url -%}
             <p>
               <a href="{{ product.metafields.custom.assembly_instructions_1_url }}" target="_blank">
