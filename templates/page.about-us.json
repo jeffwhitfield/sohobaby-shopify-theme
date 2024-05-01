@@ -7,6 +7,21 @@
         "padding_bottom": 28
       }
     },
+    "video_9VebpV": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/MOM INTERVIEW_FINAL.mp4",
+        "video_url": "",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "dfe789da-ddc4-47c2-9de7-95d53423c17e": {
       "type": "image-with-text",
       "blocks": {
@@ -222,6 +237,7 @@
   },
   "order": [
     "main",
+    "video_9VebpV",
     "dfe789da-ddc4-47c2-9de7-95d53423c17e",
     "ab6a155b-ac82-498a-ab50-f6155b912ece",
     "94da3d73-588b-457e-b382-97922e76f505",
