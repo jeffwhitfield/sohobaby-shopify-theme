@@ -106,7 +106,7 @@
                     show_badges: true,
                     price_class: 'price--large'
                   -%}
-                  {% if current_variant.inventory_quantity < 11 and current_variant.inventory_management == 'shopify' %}   
+                  {% if current_variant.inventory_quantity < 100 and current_variant.inventory_management == 'shopify' %}   
                   <p>Almost Sold Out!</p>
                   {% endif %}
                   <div class="product-item-number">
