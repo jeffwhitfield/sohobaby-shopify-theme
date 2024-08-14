@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/soho-baby-logo.png",
@@ -164,6 +173,29 @@
         "type": "shopify:\/\/apps\/king-product-options-variant\/blocks\/app-embed\/ce104259-52b1-4720-9ecf-76b34cae0401",
         "disabled": false,
         "settings": {
+        }
+      },
+      "9508235472506026167": {
+        "type": "shopify:\/\/apps\/sg-notify-me-back-in-stock\/blocks\/notifyme-embed\/149ed091-61ef-46c4-964d-eddbebe30e92",
+        "disabled": false,
+        "settings": {
+          "button_position": "right",
+          "side_button_text": "Notify Me!",
+          "side_button_color": "#ed2c24",
+          "side_button_text_color": "#ffffff",
+          "heading": "Notify Me When Available",
+          "heading_color": "#000000",
+          "subheading": "Fill in the required details to get notified when the product is again in stock!",
+          "subheading_color": "#4a4a4a",
+          "email_input_placeholder_text": "Email",
+          "name_input_placeholder_text": "Name",
+          "button_text": "Notify Me",
+          "button_color": "#ed2c24",
+          "button_text_color": "#ffffff",
+          "success_msg": "Thanks, We Will Notify You When Product Back In Stock!!",
+          "message_text_color": "#f15b29",
+          "side_class": "ptpl_sidebtn_look",
+          "ptpl_sideform": "ptpl_sideform_look"
         }
       }
     },
