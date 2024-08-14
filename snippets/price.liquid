@@ -126,6 +126,6 @@
     </span>
   {%- endif -%}
 </div>
-{% if product.selected_or_first_available_variant.inventory_quantity < 20 and product.selected_or_first_available_variant.inventory_management == 'shopify' %}   
+{% if product.selected_or_first_available_variant.inventory_quantity < 20 and product.selected_or_first_available_variant.inventory_quantity > 0 and product.selected_or_first_available_variant.inventory_management == 'shopify' %}   
 <p style="color: #dd1d1d;">Almost Sold Out!</p>
 {% endif %}
