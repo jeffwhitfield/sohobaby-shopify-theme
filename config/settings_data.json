@@ -181,7 +181,7 @@
         "settings": {
           "button_position": "right",
           "side_button_text": "Notify Me!",
-          "side_button_color": "#ed2c24",
+          "side_button_color": "#9c9392",
           "side_button_text_color": "#ffffff",
           "heading": "Notify Me When Available",
           "heading_color": "#000000",
@@ -190,10 +190,10 @@
           "email_input_placeholder_text": "Email",
           "name_input_placeholder_text": "Name",
           "button_text": "Notify Me",
-          "button_color": "#ed2c24",
+          "button_color": "#9c9392",
           "button_text_color": "#ffffff",
-          "success_msg": "Thanks, We Will Notify You When Product Back In Stock!!",
-          "message_text_color": "#f15b29",
+          "success_msg": "Thanks, We Will Notify You When the Product is Back In Stock!",
+          "message_text_color": "#000000",
           "side_class": "ptpl_sidebtn_look",
           "ptpl_sideform": "ptpl_sideform_look"
         }
