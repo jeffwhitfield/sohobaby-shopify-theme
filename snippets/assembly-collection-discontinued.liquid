@@ -1,0 +1,36 @@
+{% comment %}
+  Renders an assembly collection card
+
+  Accepts:
+  - collection: {Object} Collection Liquid object
+
+  Usage:
+  {% render 'assembly-collection' %}
+{% endcomment %}
+
+<div class="assembly-collection">
+  <h2>Discontinued Products</h2>
+  <div class="assembly-set">
+    {%- for product in shop.metaobjects.discontinued_products.values -%}
+      {%- if product.assembly_instructions_1.value -%}
+        <div class="assembly-product">
+          <h3>{{- product.title.value -}}</h3>
+          {%- if product.assembly_instructions_1.value -%}
+            <p>
+              <a href="{{ product.assembly_instructions_1.value }}" target="_blank">
+                Assembly Instructions
+              </a>
+            </p>
+          {%- endif -%}
+          {%- if product.assembly_instructions_2.value -%}
+            <p>
+              <a href="{{ product.assembly_instructions_2.value }}" target="_blank">
+                Assembly Instructions
+              </a>
+            </p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
