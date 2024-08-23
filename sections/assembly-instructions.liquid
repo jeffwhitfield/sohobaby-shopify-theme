@@ -8,7 +8,7 @@
   </h1>
     <div class="assembly-list">
       {%- for collection in collections -%}
-      {% if collection.title contains "Collection" %}
+      {% if collection.title contains "Collection" and collection.metafields.custom.no_assembly_instructions != true %}
         <div class="assembly-collection">
           {% render 'assembly-collection',
             collection: collection
