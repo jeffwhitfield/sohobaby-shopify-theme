@@ -17,14 +17,14 @@
           <h3>{{- product.title.value -}}</h3>
           {%- if product.assembly_instructions_1.value -%}
             <p>
-              <a href="{{ product.assembly_instructions_1.value }}" target="_blank">
+              <a href="{{ product.assembly_instructions_1.value.url }}" target="_blank">
                 Assembly Instructions
               </a>
             </p>
           {%- endif -%}
           {%- if product.assembly_instructions_2.value -%}
             <p>
-              <a href="{{ product.assembly_instructions_2.value }}" target="_blank">
+              <a href="{{ product.assembly_instructions_2.value.url }}" target="_blank">
                 Assembly Instructions
               </a>
             </p>
