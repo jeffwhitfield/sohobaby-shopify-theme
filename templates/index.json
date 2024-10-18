@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow_m8cQjN": {
@@ -6,12 +15,12 @@
         "slide_VfRAdR": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mom-her-child-are-complaining.jpg",
+            "image": "shopify://shop_images/mom-her-child-are-complaining.jpg",
             "heading": "Stylish sets for every nursery",
             "heading_size": "h2",
             "subheading": "Start designing your dream nursery",
             "button_label": "Shop Now",
-            "link": "shopify:\/\/collections",
+            "link": "shopify://collections",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -24,12 +33,12 @@
         "slide_FR7mij": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Everlee-Island-Crib-Brown-Angle-Lifestyle.webp",
+            "image": "shopify://shop_images/Everlee-Island-Crib-Brown-Angle-Lifestyle.webp",
             "heading": "Stylish sets for every nursery",
             "heading_size": "h2",
             "subheading": "Start designing your dream nursery",
             "button_label": "Shop Now",
-            "link": "shopify:\/\/collections",
+            "link": "shopify://collections",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -42,12 +51,12 @@
         "slide_gA4tUY": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/43011930N_RS_8293c729-6811-4b1b-adc5-54f7d37e8dad.jpg",
+            "image": "shopify://shop_images/43011930N_RS_8293c729-6811-4b1b-adc5-54f7d37e8dad.jpg",
             "heading": "Stylish sets for every nursery",
             "heading_size": "h2",
             "subheading": "Start designing your dream nursery",
             "button_label": "Shop Now",
-            "link": "shopify:\/\/collections",
+            "link": "shopify://collections",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -60,12 +69,12 @@
         "slide_YHCh9h": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slideshow_-_ellison.jpg",
+            "image": "shopify://shop_images/slideshow_-_ellison.jpg",
             "heading": "Stylish sets for every nursery",
             "heading_size": "h2",
             "subheading": "Start designing your dream nursery",
             "button_label": "Shop Now",
-            "link": "shopify:\/\/collections",
+            "link": "shopify://collections",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -78,12 +87,12 @@
         "slide_zfGfQq": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slideshow_-_cascade_1.jpg",
+            "image": "shopify://shop_images/slideshow_-_cascade_1.jpg",
             "heading": "Stylish sets for every nursery",
             "heading_size": "h2",
             "subheading": "Start designing your dream nursery",
             "button_label": "Shop Now",
-            "link": "shopify:\/\/collections",
+            "link": "shopify://collections",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -177,7 +186,7 @@
     "custom_liquid_KCh78n": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<a href=\"https:\/\/oxfordbabyandkids.com\" target=\"_blank\" class=\"callout-soho\">\n    <div class=\"callout-soho-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0580\/0846\/9573\/files\/oxford_banner_-_london_lane_a228264d-46e2-4f31-8fa9-86cad95cf0b7.jpg?v=1709870993\">\n    <\/div>\n    <div class=\"callout-soho-logo\">\n        <div class=\"callout-soho-logo-container\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0580\/0846\/9573\/files\/oxford-baby-logo.png?v=1709612819\">\n        <\/div>\n    <\/div>\n    <div class=\"callout-soho-text\">\n        <p>Check out our Oxford Baby line of baby furniture for more options!<\/p>\n        <p class=\"uppercase\">Visit the website<\/p>\n    <\/div>\n<\/a>",
+        "custom_liquid": "<a href=\"https://oxfordbabyandkids.com\" target=\"_blank\" class=\"callout-soho\">\n    <div class=\"callout-soho-image\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0580/0846/9573/files/oxford_banner_-_london_lane_a228264d-46e2-4f31-8fa9-86cad95cf0b7.jpg?v=1709870993\">\n    </div>\n    <div class=\"callout-soho-logo\">\n        <div class=\"callout-soho-logo-container\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0580/0846/9573/files/oxford-baby-logo.png?v=1709612819\">\n        </div>\n    </div>\n    <div class=\"callout-soho-text\">\n        <p>Check out our Oxford Baby line of baby furniture for more options!</p>\n        <p class=\"uppercase\">Visit the website</p>\n    </div>\n</a>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -186,7 +195,7 @@
     "custom_liquid_4UU9e9": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"callout-safety\">\n    <div class=\"callout-safety-logos callout-safety-logos-end\">\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/astm-logo.png?v=1696818991\">\n      <\/div>\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/cpsc-logo.png?v=1696818993\">\n      <\/div>\n    <\/div>\n    <div class=\"callout-safety-text\">\n        <p>Superior Quality,\nSafety & Craftsmanship<\/p>\n        <p class=\"uppercase\">The Highest Industry Standards<\/p>        \n    <\/div>\n    <div class=\"callout-safety-logos callout-safety-logos-start\">\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/bureau-veritas-logo.png?v=1696818991\">\n      <\/div>\n      <div class=\"callout-safety-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0782\/4392\/2232\/files\/greenguard-logo.png?v=1696818991\">\n      <\/div>\n    <\/div>\n<\/div>",
+        "custom_liquid": "<div class=\"callout-safety\">\n    <div class=\"callout-safety-logos callout-safety-logos-end\">\n      <div class=\"callout-safety-image\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0782/4392/2232/files/astm-logo.png?v=1696818991\">\n      </div>\n      <div class=\"callout-safety-image\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0782/4392/2232/files/cpsc-logo.png?v=1696818993\">\n      </div>\n    </div>\n    <div class=\"callout-safety-text\">\n        <p>Superior Quality,\nSafety & Craftsmanship</p>\n        <p class=\"uppercase\">The Highest Industry Standards</p>        \n    </div>\n    <div class=\"callout-safety-logos callout-safety-logos-start\">\n      <div class=\"callout-safety-image\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0782/4392/2232/files/bureau-veritas-logo.png?v=1696818991\">\n      </div>\n      <div class=\"callout-safety-image\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0782/4392/2232/files/greenguard-logo.png?v=1696818991\">\n      </div>\n    </div>\n</div>",
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
@@ -198,10 +207,10 @@
         "row_DqHHYR": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/home-safer-for-baby.jpg",
+            "image": "shopify://shop_images/home-safer-for-baby.jpg",
             "caption": "",
             "heading": "Safer for baby and home",
-            "text": "<p>All of our Cribs are GREENGUARD Gold Certified, ensuring that your nursery is a healthy space for your little one.<\/p><ul><li>Screened for 10,000 chemical compounds and VOC’s<\/li><li>Rigorously Tested & Approved<\/li><li>Cleaner Indoor Air<\/li><li>Promotes healthier breathing environment<\/li><\/ul>",
+            "text": "<p>All of our Cribs are GREENGUARD Gold Certified, ensuring that your nursery is a healthy space for your little one.</p><ul><li>Screened for 10,000 chemical compounds and VOC’s</li><li>Rigorously Tested & Approved</li><li>Cleaner Indoor Air</li><li>Promotes healthier breathing environment</li></ul>",
             "button_label": "",
             "button_link": ""
           }
@@ -209,21 +218,21 @@
         "row_kAcjfq": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discover_our_newest_-_everlee_1.jpg",
+            "image": "shopify://shop_images/discover_our_newest_-_everlee_1.jpg",
             "caption": "",
             "heading": "Discover Our Newest Collection",
             "text": "",
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/everlee-collection"
+            "button_link": "shopify://collections/everlee-collection"
           }
         },
         "row_3kkwAy": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grows_with_baby_-_cascade_bed_1.jpg",
+            "image": "shopify://shop_images/grows_with_baby_-_cascade_bed_1.jpg",
             "caption": "",
             "heading": "Grows With Your Baby",
-            "text": "<p>Our cribs easily convert to a toddler bed, day bed and a full-size bed.<\/p>",
+            "text": "<p>Our cribs easily convert to a toddler bed, day bed and a full-size bed.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -249,6 +258,23 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1729292466d42bec69": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_hJyPij": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_hJyPij"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -256,6 +282,7 @@
     "collection_list_homepage_RhjVjw",
     "custom_liquid_KCh78n",
     "custom_liquid_4UU9e9",
-    "multirow_KKGphX"
+    "multirow_KKGphX",
+    "1729292466d42bec69"
   ]
 }
