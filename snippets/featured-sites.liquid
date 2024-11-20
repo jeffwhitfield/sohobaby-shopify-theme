@@ -1,0 +1,20 @@
+{%- if shop.metaobjects.featured_sites.values -%}
+  <div class="color-background-1 isolate gradient">
+    <div class="featured-sites section-{{ section.id }}-padding">
+      <div class="featured-sites__title title-wrapper title-wrapper--no-top-margin page-width">
+        <h2 class="title inline-richtext">Trusted By</h2>
+      </div>
+      <div class="featured-sites__parade">
+      {%- for site in shop.metaobjects.featured_sites.values -%}
+        <div class="featured-sites__parade-item">
+          <div class="featured-sites__parade-logo">
+            <a {% if site.url.value.size > 0 %}href="{{ site.url.value }}" target="_blank"{% endif %}>
+              <img src="{{ site.logo.value | image_url }}" alt="{{ site.name.value }}" />
+            </a>            
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
