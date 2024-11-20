@@ -3685,3 +3685,46 @@ details-disclosure > details {
 .image-with-text__media {
   border: none;
 }
+
+.featured-sites h2 {
+  text-align: center;
+}
+.featured-sites__parade {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.featured-sites__parade-item {
+  width: calc(100% / 6);
+  padding: 1.5rem 1rem;
+}
+.featured-sites__parade-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.featured-sites__parade-logo img {
+  width: 100%;
+}
+@media screen and (min-width: 1220px) and (max-width: 1439px) {
+  .featured-sites__parade-item {
+    width: calc(100% / 5);
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1219px) {
+  .featured-sites__parade-item {
+    width: calc(100% / 4);
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .featured-sites__parade-item {
+    width: calc(100% / 3);
+  }
+
+}
+@media screen and (max-width: 749px) {
+  .featured-sites__parade-item {
+    width: calc(100% / 2);
+  }
+}
