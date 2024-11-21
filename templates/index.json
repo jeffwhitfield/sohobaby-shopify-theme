@@ -275,6 +275,15 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "custom_liquid_6BtMA7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'featured-sites' %}",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -283,6 +292,7 @@
     "custom_liquid_KCh78n",
     "custom_liquid_4UU9e9",
     "multirow_KKGphX",
-    "1729292466d42bec69"
+    "1729292466d42bec69",
+    "custom_liquid_6BtMA7"
   ]
 }
