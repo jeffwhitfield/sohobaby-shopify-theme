@@ -81,12 +81,6 @@
             "id": "shadow",
             "label": "t:settings_schema.colors.settings.shadow.label",
             "default": "#121212"
-          },
-          {
-            "type": "color",
-            "id": "color_accent_3",
-            "label": "Accent 3",
-            "default": "#b61b1c"
           }
 
         ],
