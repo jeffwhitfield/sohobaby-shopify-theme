@@ -63,11 +63,22 @@
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
       {% if value != 'Standard' and value != 'Default' and value != 'Default Title' %}
         <span class="swatch">
+          {% paginate shop.metaobjects.finishes.values by 250 %}
+          {% assign finishes = shop.metaobjects.finishes.values %}
+          {% for swatch in finishes %}
+          {% if swatch.label == value %}
+          <img
+            src="{{ swatch.image | image_url }}"
+            alt="{{ swatch.label -}}">
+          {% endif %}
+          {%- endfor -%}
+          <!-- Old Swatch image
           <img
             src="https://assets.sohobaby.com/assets/Swatches/{{ value | downcase | replace: ' ', '-' }}.png"
-            alt="{{ value -}}"
-          >
-        </span>
+            alt="{{ value -}}">
+          -->
+          {% endpaginate %}
+          </span>
         <span class="swatch-value">{{ value -}}</span>
       {% else %}
         <span class="swatch-value no-swatch">{{ value -}}</span>
