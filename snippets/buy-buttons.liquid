@@ -121,7 +121,18 @@
       </div>
     </div>
   {%- endif -%}
-
+  <!-- Semget Embed HTML !-->
+    <script>
+      var semgetshopdomain = '{{- shop.permanent_domain | escape -}}';
+      var semgetProductSpecs = {{- product | json }};
+      var semgetCurVarId = '{{- product.selected_or_first_available_variant.id -}}';
+      var semgetVariantSpecs = {};
+      {%- for variant in product.variants -%} 
+        semgetVariantSpecs[{{- variant.id -}}] = {{- variant | json -}};
+      {%- endfor -%}
+    </script>
+    <div id="semgetembed" data-btnclass="abcsemget" data-text="Notify me" data-textcolor="#ed2c24" data-buttonbg="#ffffff" data-buttonborder="#c679ab" data-hovercolor="#c679ab" data-hovertextcolor="#ffffff" data-width="100" data-radious="14" data-popupclass="semgetpopup" data-popuphead="Notify Me When Available" data-popupsubhead="Fill in the required details to get notified when the product is again in stock!" data-nametext="Name" data-emailtext="Email" data-popupbtn="Notify Me" data-popupimg="https://restock.semget.com/main-assets/img/popupbg.jpg" data-thanksmsg="Thanks, We Will Notify You When Product Back In Stock!!" data-popupheadcolor="#55311C"  data-popupsubheadcolor="#4A4A4A" data-popuplabelcolor="#8C7569" data-popupbtncolor="#ED2C24" data-popupbtntextcolor="#FFFFFF" data-thanksmsgcolor="#F15B29"></div>
+    <!-- Semget Embed HTML !-->
   {%- if show_pickup_availability -%}
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
