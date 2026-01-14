@@ -169,29 +169,6 @@
         "disabled": false,
         "settings": {}
       },
-      "9508235472506026167": {
-        "type": "shopify://apps/sg-notify-me-back-in-stock/blocks/notifyme-embed/149ed091-61ef-46c4-964d-eddbebe30e92",
-        "disabled": false,
-        "settings": {
-          "button_position": "right",
-          "side_button_text": "Notify Me!",
-          "side_button_color": "#9c9392",
-          "side_button_text_color": "#ffffff",
-          "heading": "Notify Me When Available",
-          "heading_color": "#000000",
-          "subheading": "Fill in the required details to get notified when the product is again in stock!",
-          "subheading_color": "#4a4a4a",
-          "email_input_placeholder_text": "Email",
-          "name_input_placeholder_text": "Name",
-          "button_text": "Notify Me",
-          "button_color": "#9c9392",
-          "button_text_color": "#ffffff",
-          "success_msg": "Thanks, We Will Notify You When the Product is Back In Stock!",
-          "message_text_color": "#000000",
-          "side_class": "ptpl_sidebtn_look",
-          "ptpl_sideform": "ptpl_sideform_look"
-        }
-      },
       "7147999719060634790": {
         "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
         "disabled": false,
@@ -211,6 +188,29 @@
         "type": "shopify://apps/pushowl-brevo/blocks/pushowl-app-embed-3d2ff2b5/fa20c3ba-38bf-43e0-ba5c-431f6ae07d95",
         "disabled": false,
         "settings": {}
+      },
+      "9508235472506026167": {
+        "type": "shopify://apps/sg-notify-me-back-in-stock/blocks/notifyme-embed/149ed091-61ef-46c4-964d-eddbebe30e92",
+        "disabled": true,
+        "settings": {
+          "button_position": "right",
+          "side_button_text": "Notify Me!",
+          "side_button_color": "#9c9392",
+          "side_button_text_color": "#ffffff",
+          "heading": "Notify Me When Available",
+          "heading_color": "#000000",
+          "subheading": "Fill in the required details to get notified when the product is again in stock!",
+          "subheading_color": "#4a4a4a",
+          "email_input_placeholder_text": "Email",
+          "name_input_placeholder_text": "Name",
+          "button_text": "Notify Me",
+          "button_color": "#9c9392",
+          "button_text_color": "#ffffff",
+          "success_msg": "Thanks, We Will Notify You When the Product is Back In Stock!",
+          "message_text_color": "#000000",
+          "side_class": "ptpl_sidebtn_look",
+          "ptpl_sideform": "ptpl_sideform_look"
+        }
       }
     },
     "color_schemes": {
