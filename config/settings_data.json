@@ -459,7 +459,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".has-text-white {color: #ffffff !important;}"
+      ".has-text-white {color: #ffffff !important;}",
+      ".terms-relentless{display:none;}"
     ]
   }
 }
