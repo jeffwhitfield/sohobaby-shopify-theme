@@ -211,6 +211,13 @@
           "side_class": "ptpl_sidebtn_look",
           "ptpl_sideform": "ptpl_sideform_look"
         }
+      },
+      "3667842014806057753": {
+        "type": "shopify://apps/one-click-upsell/blocks/app-embed/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+        "disabled": false,
+        "settings": {
+          "allowed_templates": ""
+        }
       }
     },
     "color_schemes": {
@@ -460,7 +467,7 @@
   "platform_customizations": {
     "custom_css": [
       ".has-text-white {color: #ffffff !important;}",
-      ".terms-relentless{display:none;}"
+      ".terms-relentless {display: none;}"
     ]
   }
 }
