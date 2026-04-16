@@ -110,6 +110,14 @@
         "slide_YHCh9h",
         "slide_zfGfQq"
       ],
+      "custom_css": [
+        ".slideshow__media.banner__media img {width: 100% !important;}",
+        ".slideshow__text.banner__box {max-width: 1320px !important; width: 100% !important; background-color: transparent !important; outline: none !important;}",
+        ".banner__media:after {opacity: 1 !important; background: linear-gradient( 180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100% ) !important;}",
+        ".slideshow__text.banner__box h2 {font-size: 3.5vw !important;}",
+        ".slideshow__text.banner__box p {font-size: 1.5vw !important;}",
+        ".slideshow__media.banner__media {height: 85vh !important;}"
+      ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "small",
