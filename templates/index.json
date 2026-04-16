@@ -284,10 +284,20 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "custom_liquid_fKTzXJ": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'featured-sites' %}",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "slideshow_m8cQjN",
+    "custom_liquid_fKTzXJ",
     "collection_list_homepage_RhjVjw",
     "custom_liquid_KCh78n",
     "custom_liquid_4UU9e9",
