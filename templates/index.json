@@ -132,7 +132,10 @@
     "custom_liquid_fKTzXJ": {
       "type": "custom-liquid",
       "custom_css": [
-        ".featured-sites__title.title-wrapper.title-wrapper--no-top-margin.page-width {display: none;}"
+        ".featured-sites__title.title-wrapper.title-wrapper--no-top-margin.page-width {padding: 0; margin: 0; width: calc(100% / 5);}",
+        ".featured-sites {display: flex; justify-content: center; flex-flow: row; max-width: var(--page-width); margin: 0 auto; align-items: center;}",
+        ".featured-sites__parade {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; width: calc((100% / 5) * 4);}",
+        ".featured-sites__parade-item {width: calc(100% / 4); padding: 1.5rem 1rem; box-sizing: border-box;}"
       ],
       "settings": {
         "custom_liquid": "{% render 'featured-sites' %}",
