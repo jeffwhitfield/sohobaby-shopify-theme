@@ -299,6 +299,66 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "rich_text_DFfmt3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QpMcih": {
+          "type": "heading",
+          "settings": {
+            "heading": "Influenced by Oxford",
+            "heading_size": "h2"
+          }
+        },
+        "text_WcnrQc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QpMcih",
+        "text_WcnrQc"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 0
+      }
+    },
+    "17767115945f62d9b7": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_i9kXgh": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 25,
+            "show_instagram_link": true,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_i9kXgh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -308,6 +368,8 @@
     "custom_liquid_KCh78n",
     "custom_liquid_4UU9e9",
     "multirow_KKGphX",
-    "1729292466d42bec69"
+    "1729292466d42bec69",
+    "rich_text_DFfmt3",
+    "17767115945f62d9b7"
   ]
 }
