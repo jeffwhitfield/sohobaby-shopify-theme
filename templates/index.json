@@ -359,25 +359,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "1777115633cf12844a": {
-      "type": "apps",
-      "blocks": {
-        "add_instagram_feed_tagembed_app_block_WEAgNH": {
-          "type": "shopify://apps/add-instagram-feed-tagembed/blocks/app-block/087f3315-479f-4a46-9a8d-6edf602a4af7",
-          "settings": {
-            "tagembed_feed_website_id": "323647",
-            "tagembed_feed": "",
-            "tagembed_feed_width": 90
-          }
-        }
-      },
-      "block_order": [
-        "add_instagram_feed_tagembed_app_block_WEAgNH"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -389,7 +370,6 @@
     "custom_liquid_KCh78n",
     "custom_liquid_4UU9e9",
     "multirow_KKGphX",
-    "1729292466d42bec69",
-    "1777115633cf12844a"
+    "1729292466d42bec69"
   ]
 }
