@@ -12,85 +12,13 @@
     "slideshow_m8cQjN": {
       "type": "slideshow",
       "blocks": {
-        "slide_VfRAdR": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/mom-her-child-are-complaining.jpg",
-            "heading": "Stylish sets for every nursery",
-            "heading_size": "h2",
-            "subheading": "Start designing your dream nursery",
-            "button_label": "Shop Now",
-            "link": "shopify://collections",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_FR7mij": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Everlee-Island-Crib-Brown-Angle-Lifestyle.webp",
-            "heading": "Stylish sets for every nursery",
+            "heading": "The Nursery You've Been Dreaming Of Starts Here.",
             "heading_size": "h2",
-            "subheading": "Start designing your dream nursery",
-            "button_label": "Shop Now",
-            "link": "shopify://collections",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_gA4tUY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/43011930N_RS_8293c729-6811-4b1b-adc5-54f7d37e8dad.jpg",
-            "heading": "Stylish sets for every nursery",
-            "heading_size": "h2",
-            "subheading": "Start designing your dream nursery",
-            "button_label": "Shop Now",
-            "link": "shopify://collections",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_YHCh9h": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/slideshow_-_ellison.jpg",
-            "heading": "Stylish sets for every nursery",
-            "heading_size": "h2",
-            "subheading": "Start designing your dream nursery",
-            "button_label": "Shop Now",
-            "link": "shopify://collections",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_zfGfQq": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/13211810_RS_021ed1be-11b1-45df-99ae-444011d0cbfd.jpg",
-            "heading": "Stylish sets for every nursery",
-            "heading_size": "h2",
-            "subheading": "Start designing your dream nursery",
+            "subheading": "See the cribs, dressers, and collections that are showing up in nurseries across the country.",
             "button_label": "Shop Now",
             "link": "shopify://collections",
             "button_style_secondary": false,
@@ -104,11 +32,7 @@
         }
       },
       "block_order": [
-        "slide_VfRAdR",
-        "slide_FR7mij",
-        "slide_gA4tUY",
-        "slide_YHCh9h",
-        "slide_zfGfQq"
+        "slide_FR7mij"
       ],
       "custom_css": [
         ".slideshow__media.banner__media img {width: 100% !important;}",
