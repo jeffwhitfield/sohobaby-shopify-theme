@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_FPzPkN": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "10% off your first order. Enter email to learn more!",
             "link": ""
@@ -23,6 +24,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free shipping on all orders over $799!",
             "link": ""
