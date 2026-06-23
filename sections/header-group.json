@@ -16,15 +16,13 @@
       "blocks": {
         "announcement_FPzPkN": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "10% off your first order. Enter email to learn more!",
+            "text": "10% off INSTANTLY!",
             "link": ""
           }
         },
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Free shipping on all orders over $799!",
             "link": ""
