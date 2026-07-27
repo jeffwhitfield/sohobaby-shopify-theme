@@ -1,0 +1,357 @@
+{% style %}
+  .video-hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .video-hero--vh_50 {
+    min-height: 50vh;
+  }
+  .video-hero--vh_65 {
+    min-height: 65vh;
+  }
+  .video-hero--vh_75 {
+    min-height: 75vh;
+  }
+
+  .video-hero--vh_85 {
+    min-height: 85vh;
+  }
+
+  .video-hero--vh_95 {
+    min-height: 95vh;
+  }
+
+  .video-hero--vh_100 {
+    min-height: 100vh;
+  }
+
+  .video-hero__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .video-hero__video,
+  .video-hero__image,
+  .video-hero__image img,
+  .video-hero__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+  }
+  .video-hero__image{
+    z-index: 2;
+  }
+  .video-hero__video{
+    z-index: 3;
+  }
+
+  .video-hero__placeholder {
+    background-color: #d9d9d9;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .video-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(var(--vh-overlay-color, 0, 0, 0), var(--vh-overlay-opacity, 0.4));
+    pointer-events: none;
+    z-index: 4;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .video-hero__content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .video-hero__content-inner {
+    max-width: 100%;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .video-hero__title {
+    margin: 0;
+    font-size: var(--vh-heading-size, 2.5rem);
+    color: var(--vh-heading-color, #ffffff);
+    line-height: calc(1 + .3/max(1,var(--font-heading-scale)));
+  }
+
+  .video-hero__text {
+    margin: 11px 0 22px 0;
+    font-size: var(--vh-text-size, 1.1rem);
+    color: var(--vh-text-color, #ffffff);
+    line-height: 1.5;
+  }
+
+  .video-hero__text p {
+    margin: 0 0 0.75rem;
+  }
+
+  .video-hero__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .video-hero__title {
+      font-size: 3.5vw !important;
+    }
+
+    .video-hero__text {
+      font-size: 1.5vw !important;
+    }
+    .video-hero__text p{
+      font-size: 1.5vw !important;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .video-hero__title {
+      font-size: 26px !important;
+    }
+
+    .video-hero__text {
+      font-size: 15px !important;
+    }
+    .video-hero__text p{
+      font-size: 15px !important;
+    }
+
+    .video-hero--vh_50,
+    .video-hero--vh_65
+    .video-hero--vh_75 {
+        min-height: 50vh;
+    }
+    .video-hero--vh_85,
+    .video-hero--vh_95,
+    .video-hero--vh_100 {
+        min-height: 60vh;
+    }
+    .video-hero{
+        align-items: flex-end;
+    }
+  }
+{% endstyle %}
+
+{%- liquid
+  assign section_height = section.settings.section_height
+  assign overlay_color = section.settings.overlay_color
+  assign overlay_opacity = section.settings.overlay_opacity | divided_by: 100.0
+  assign heading_font_size = section.settings.heading_font_size
+  assign text_font_size = section.settings.text_font_size
+  assign heading_color = section.settings.heading_color
+  assign text_color = section.settings.text_color
+-%}
+
+<div
+  class="video-hero video-hero--{{ section_height }}"
+  style="--vh-overlay-color: {{ overlay_color.red }}, {{ overlay_color.green }}, {{ overlay_color.blue }}; --vh-overlay-opacity: {{ overlay_opacity }}; --vh-heading-size: {{ heading_font_size }}px; --vh-text-size: {{ text_font_size }}px; --vh-heading-color: {{ heading_color }}; --vh-text-color: {{ text_color }};"
+  id="VideoHero-{{ section.id }}"
+>
+
+  <div class="video-hero__media">
+      {{
+        section.settings.video
+        | video_tag:
+          image_size: '1920x',
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          playsinline: true,
+          poster: section.settings.fallback_image,
+          class: 'video-hero__video'
+      }}
+    {%- if section.settings.fallback_image != blank -%}
+      {{
+        section.settings.fallback_image
+        | image_url: width: 1920
+        | image_tag:
+          loading: 'lazy',
+          sizes: '100vw',
+          widths: '375, 750, 1100, 1500, 1920',
+          class: 'video-hero__image'
+      }}
+    {%- else -%}
+      <div class="video-hero__placeholder">xcvxvxv</div>
+    {%- endif -%}
+
+    <div class="video-hero__overlay">xvxvxv</div>
+  </div>
+
+  <div class="video-hero__content page-width">
+    <div class="video-hero__content-inner">
+      {%- if section.settings.title != blank -%}
+        <h2 class="video-hero__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="video-hero__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.button_label != blank -%}
+        <div class="video-hero__buttons">
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="button {% if section.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+          >
+            {{ section.settings.button_label }}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video hero",
+  "tag": "section",
+  "class": "section-video-hero",
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Background video",
+      "info": "Video uploaded to Shopify. Autoplays muted and loops. Falls back to the image below on unsupported devices."
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback / poster image",
+      "info": "Shown while the video loads, and used instead of the video on devices that can't play it or if no video is uploaded."
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Section height",
+      "options": [
+        { "value": "vh_50", "label": "50vh" },
+        { "value": "vh_65", "label": "65vh" },
+        { "value": "vh_75", "label": "75vh" },
+        { "value": "vh_85", "label": "85vh" },
+        { "value": "vh_95", "label": "95vh" },
+        { "value": "vh_100", "label": "Full screen (100vh)" }
+      ],
+      "default": "vh_100"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Add a heading"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 16,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share a bit about this section or promotion.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "Text font size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "label": "Use secondary (outline) button style",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video hero"
+    }
+  ]
+}
+{% endschema %}
