@@ -283,6 +283,30 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "video_hero_mCFNJt": {
+      "type": "video-hero",
+      "custom_css": [
+        ".video-hero__buttons .button {color: #000 !important; background-color: #fff !important; border: 1px solid #ffffff !important; border-radius: 50px !important; font-size: 20px !important; padding: 5px 50px !important;}",
+        ".video-hero__buttons .button:before,.video-hero__buttons .button:after {display: none;}"
+      ],
+      "name": "Video hero",
+      "settings": {
+        "video": "shopify://files/videos/Soho.mp4",
+        "fallback_image": "shopify://shop_images/Everlee-Island-Crib-Brown-Angle-Lifestyle.webp",
+        "section_height": "vh_65",
+        "overlay_color": "#000000",
+        "overlay_opacity": 40,
+        "title": "The Nursery You've Been Dreaming Of Starts Here.",
+        "heading_font_size": 68,
+        "heading_color": "#ffffff",
+        "text": "<p>See the cribs, dressers, and collections that are showing up in nurseries across the country.</p>",
+        "text_font_size": 28,
+        "text_color": "#ffffff",
+        "button_label": "Shop now",
+        "button_link": "shopify://collections",
+        "button_style_secondary": false
+      }
     }
   },
   "order": [
@@ -294,6 +318,7 @@
     "custom_liquid_KCh78n",
     "custom_liquid_4UU9e9",
     "multirow_KKGphX",
-    "1729292466d42bec69"
+    "1729292466d42bec69",
+    "video_hero_mCFNJt"
   ]
 }
