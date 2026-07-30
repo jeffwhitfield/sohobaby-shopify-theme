@@ -41,13 +41,6 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -88,6 +81,13 @@
         "vimg_multiple_variant_images_app_block_zLmNUP": {
           "type": "shopify://apps/vimg-multiple-variant-images/blocks/app.block/3fcfc3bb-b4e3-44bd-9ff9-3d525461bb38",
           "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
         }
       },
       "block_order": [
@@ -97,13 +97,13 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
         "description",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
         "share",
-        "vimg_multiple_variant_images_app_block_zLmNUP"
+        "vimg_multiple_variant_images_app_block_zLmNUP",
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
