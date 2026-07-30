@@ -122,10 +122,11 @@
     },
     "certification_highlight_q4KUtY": {
       "type": "certification-highlight",
+      "custom_css": [],
       "name": "Certification Highlight",
       "settings": {
-        "background_color": "#F2F3F8",
-        "left_color": "#C3C2C7",
+        "background_color": "#f2f3f8",
+        "left_color": "#c3c2c7",
         "left_image": "shopify://shop_images/Everlee-4in1-Convertible-Crib-Gray-Front.jpg",
         "badge_image": "shopify://shop_images/ul-greenguard-gold-vector-logo_3458a461-c5c4-40b3-a9de-312e4fe2e8ac.webp",
         "title": "GREENGUARD Gold Certified",
@@ -133,7 +134,9 @@
         "text_2": "<p>Greenguard Gold Certified products guarantee safer furniture for babies and peace of mind for parents.</p>",
         "show_decoration": true,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "margin_top": 100,
+        "margin_bottom": 100
       }
     },
     "related-products": {
