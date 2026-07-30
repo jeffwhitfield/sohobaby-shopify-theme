@@ -106,9 +106,11 @@
                     show_badges: true,
                     price_class: 'price--large'
                   -%}
+                  {% comment %}
                   <div class="product-item-number">
                     <small><strong>Item Number:</strong> {{ product.selected_or_first_available_variant.sku }}</small>
                   </div>
+                  {% endcomment %}
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
