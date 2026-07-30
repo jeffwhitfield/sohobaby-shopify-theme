@@ -725,11 +725,13 @@
               {{ form | payment_terms }}
             {%- endform -%}
           </div>
+           {% comment %}
           {%- if product.metafields.custom.greenguard_certified -%}
             <div class="product__greenguard">
               <img src="https://cdn.shopify.com/s/files/1/0782/4392/2232/files/greenguard-logo-cropped.png?v=1701285619" width="100" height="134" style="width: 100px;" alt="GreenGuard Certified" />
             </div>
           {%- endif -%}
+           {% endcomment %}
         {%- endif -%}
       </product-info>
     </div>
