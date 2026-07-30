@@ -3706,6 +3706,18 @@ details-disclosure > details {
 .featured-sites__parade-logo img {
   width: 100%;
 }
+/*******************
+30-7-2026
+**************/
+.product .product__info-wrapper .product__title h1{
+  font-size: 32px;
+  color: #121212;
+}
+
+
+/***************
+responsive
+************/
 @media screen and (min-width: 1220px) and (max-width: 1439px) {
   .featured-sites__parade-item {
     width: calc(100% / 5);

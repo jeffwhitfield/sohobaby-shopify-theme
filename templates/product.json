@@ -1,19 +1,24 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
+        "judge_me_reviews_preview_badge_GALyLT": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -24,13 +29,7 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
-        },
-        "judge_me_reviews_preview_badge_GALyLT": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -40,8 +39,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -52,15 +50,14 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
-            "content": "<p>For information on shipping and returns, please review our <a href=\"\/pages\/customer-service-policies\" title=\"Customer Service Policies\">Customer Service Policies<\/a><\/p>",
+            "content": "<p>For information on shipping and returns, please review our <a href=\"/pages/customer-service-policies\" title=\"Customer Service Policies\">Customer Service Policies</a></p>",
             "page": ""
           }
         },
@@ -69,7 +66,7 @@
           "settings": {
             "heading": "Item Details",
             "icon": "ruler",
-            "content": "<p><strong>Assembled Dimensions: <br\/><\/strong>{{ product.metafields.custom.assembled_dimensions.value }}<\/p><p><strong>Assembled Weight: <br\/><\/strong>{{ product.metafields.custom.assembled_weight.value }} lb.<\/p><p><strong>Carton Dimensions:<br\/><\/strong>{{ product.metafields.custom.dimensions.value }}<\/p><p><strong>Carton Weight:<br\/><\/strong>{{ product.metafields.custom.carton_weight.value }} lb.<\/p>",
+            "content": "<p><strong>Assembled Dimensions: <br/></strong>{{ product.metafields.custom.assembled_dimensions.value }}</p><p><strong>Assembled Weight: <br/></strong>{{ product.metafields.custom.assembled_weight.value }} lb.</p><p><strong>Carton Dimensions:<br/></strong>{{ product.metafields.custom.dimensions.value }}</p><p><strong>Carton Weight:<br/></strong>{{ product.metafields.custom.carton_weight.value }} lb.</p>",
             "page": ""
           }
         },
@@ -89,17 +86,15 @@
           }
         },
         "vimg_multiple_variant_images_app_block_zLmNUP": {
-          "type": "shopify:\/\/apps\/vimg-multiple-variant-images\/blocks\/app.block\/3fcfc3bb-b4e3-44bd-9ff9-3d525461bb38",
-          "settings": {
-          }
+          "type": "shopify://apps/vimg-multiple-variant-images/blocks/app.block/3fcfc3bb-b4e3-44bd-9ff9-3d525461bb38",
+          "settings": {}
         }
       },
       "block_order": [
-        "vendor",
+        "judge_me_reviews_preview_badge_GALyLT",
         "title",
         "caption",
         "price",
-        "judge_me_reviews_preview_badge_GALyLT",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -129,8 +124,12 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_review_widget_pwY6jA": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
           }
         }
       },
