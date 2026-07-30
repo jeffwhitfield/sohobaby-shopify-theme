@@ -120,33 +120,20 @@
         "padding_bottom": 0
       }
     },
-    "170978907970d49d04": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_pwY6jA": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_pwY6jA"
-      ],
+    "certification_highlight_q4KUtY": {
+      "type": "certification-highlight",
+      "name": "Certification Highlight",
       "settings": {
-        "include_margins": true
-      }
-    },
-    "custom_liquid_Vq4exd": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% render 'related-products' %}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "background_color": "#F2F3F8",
+        "left_color": "#C3C2C7",
+        "left_image": "shopify://shop_images/Everlee-4in1-Convertible-Crib-Gray-Front.jpg",
+        "badge_image": "shopify://shop_images/ul-greenguard-gold-vector-logo_3458a461-c5c4-40b3-a9de-312e4fe2e8ac.webp",
+        "title": "GREENGUARD Gold Certified",
+        "text": "<p>Relax and breathe easy knowing your nursery is GREENGUARD Gold Certified. Greenguard Gold certified products are tested for over 15,000 chemicals and VOC’s, ensuring low emissions and healthier indoor air inside your baby’s nursery. Because newborns spend up to 90% of their time indoors, and sleep for up to 19 hours per day, it is essential for them to have a healthy environment in their nursery.</p>",
+        "text_2": "<p>Greenguard Gold Certified products guarantee safer furniture for babies and peace of mind for parents.</p>",
+        "show_decoration": true,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "related-products": {
@@ -166,12 +153,42 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_Vq4exd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'related-products' %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "170978907970d49d04": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_pwY6jA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_pwY6jA"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "170978907970d49d04",
+    "certification_highlight_q4KUtY",
+    "related-products",
     "custom_liquid_Vq4exd",
-    "related-products"
+    "170978907970d49d04"
   ]
 }
