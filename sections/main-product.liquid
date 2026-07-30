@@ -133,16 +133,7 @@
                   {%- endform -%}
                 </div>
               {%- endif -%}
-              {%- if product.metafields.custom.greenguard_certified -%}
-                <div class="product__greenguard">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0782/4392/2232/files/greenguard-logo-cropped.png?v=1701285619"
-                    width="100"
-                    style="width: 100px;"
-                    alt="GreenGuard Certified"
-                  >
-                </div>
-              {%- endif -%}
+              
             {%- when 'inventory' -%}
               <p
                 class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -281,6 +272,16 @@
                     {%- endif -%}
                   </div>
                 </details>
+                {%- if product.metafields.custom.greenguard_certified -%}
+                  <div class="product__greenguard">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0782/4392/2232/files/greenguard-logo-cropped.png?v=1701285619"
+                      width="100"
+                      style="width: 100px;"
+                      alt="GreenGuard Certified"
+                    >
+                  </div>
+                {%- endif -%}
               </div>
             {%- when 'quantity_selector' -%}
               {%- if product.metafields.custom.retailer_exclusive_url -%}
