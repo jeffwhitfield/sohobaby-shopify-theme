@@ -201,10 +201,10 @@ fieldset.product-form__input .form__label {
   color: rgb(var(--color-foreground));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1rem 2rem;
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
+  padding: 4px;
+  font-size: 0;
+  letter-spacing: 0;
+  line-height: 0;
   text-align: center;
   transition: border var(--duration-short) ease;
   cursor: pointer;
@@ -246,7 +246,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
+  background-color: #000;
   color: rgb(var(--color-background));
 }
 
