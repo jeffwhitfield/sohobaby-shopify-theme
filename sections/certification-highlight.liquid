@@ -40,7 +40,6 @@
       {%- endif -%}
 
       {%- if section.settings.show_decoration -%}
-        <img class="cert-highlight__deco cert-highlight__deco--splat" src="{{ deco_splat }}" alt="" loading="lazy" width="90" height="110">
         <img class="cert-highlight__deco cert-highlight__deco--squiggle" src="{{ deco_squiggle }}" alt="" loading="lazy" width="103" height="105">
       {%- endif -%}
     </div>
@@ -69,6 +68,10 @@
 
       {%- if section.settings.text_2 != blank -%}
         <div class="cert-highlight__text cert-highlight__text--secondary">{{ section.settings.text_2 }}</div>
+      {%- endif -%}
+      {%- if section.settings.show_decoration -%}
+        <img class="cert-highlight__deco cert-highlight__deco--splat" src="{{ deco_splat }}" alt="" loading="lazy" width="90" height="110">
+
       {%- endif -%}
     </div>
 
