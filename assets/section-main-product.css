@@ -217,9 +217,9 @@ fieldset.product-form__input .form__label {
   padding-left: 0;
 }
 .product-form__input .swatch {
-  position: absolute;
-  left: 2px;
-  top: 2px;
+    position: relative;
+    left: initial;
+    top: initial;
 }
 
 .product-form__input .swatch img {
