@@ -46,8 +46,8 @@
             src="{{ section.settings.badge_image | image_url: width: 200 }}"
             alt="{{ section.settings.badge_image.alt | escape }}"
             loading="lazy"
-            width="67"
-            height="90"
+            width="{{ section.settings.badge_image.width }}"
+            height="{{ section.settings.badge_image.height }}"
           >
         {%- endif -%}
 
@@ -141,8 +141,9 @@
   }
 
   #cert-highlight-{{ section.id }} .cert-highlight__badge {
-    width: 64px;
-    height: auto;
+    width: 67px;
+    height: 90px;
+    object-fit: contain;
     flex-shrink: 0;
   }
 
