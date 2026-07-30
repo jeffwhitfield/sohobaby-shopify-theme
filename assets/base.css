@@ -3713,7 +3713,9 @@ details-disclosure > details {
   font-size: 32px;
   color: #121212;
 }
-
+.product.product--large .product__media-wrapper .product__column-sticky .slider-mobile-gutter .product-media-container.media-type-image {
+    background-color: #E8E8EA;
+}
 
 /***************
 responsive
