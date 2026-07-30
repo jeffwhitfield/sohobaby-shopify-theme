@@ -1,0 +1,300 @@
+{%- comment -%}
+  Section: Certification Highlight
+  Left: editable image on a colored blob background
+  Right: editable badge image, title, and body text
+  All settings (images, text, colors) are editable from the Theme Editor.
+{%- endcomment -%}
+
+<div class="cert-highlight" id="cert-highlight-{{ section.id }}">
+  <div class="cert-highlight__inner">
+
+    <div class="cert-highlight__left">
+      <div class="cert-highlight__blob"></div>
+      {%- if section.settings.left_image != blank -%}
+        <img
+          class="cert-highlight__left-image"
+          src="{{ section.settings.left_image | image_url: width: 1200 }}"
+          alt="{{ section.settings.left_image.alt | escape }}"
+          loading="lazy"
+          width="{{ section.settings.left_image.width }}"
+          height="{{ section.settings.left_image.height }}"
+        >
+      {%- else -%}
+        <div class="cert-highlight__left-placeholder">
+          {{ 'image' | placeholder_svg_tag: 'cert-highlight__placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="cert-highlight__right">
+      {%- if section.settings.badge_image != blank -%}
+        <img
+          class="cert-highlight__badge"
+          src="{{ section.settings.badge_image | image_url: width: 200 }}"
+          alt="{{ section.settings.badge_image.alt | escape }}"
+          loading="lazy"
+          width="{{ section.settings.badge_image.width }}"
+          height="{{ section.settings.badge_image.height }}"
+        >
+      {%- endif -%}
+
+      {%- if section.settings.title != blank -%}
+        <h2 class="cert-highlight__title">{{ section.settings.title | escape }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="cert-highlight__text">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.text_2 != blank -%}
+        <div class="cert-highlight__text cert-highlight__text--secondary">{{ section.settings.text_2 }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_decoration -%}
+      <svg class="cert-highlight__deco cert-highlight__deco--splat" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M60 5 L70 35 L100 20 L80 48 L112 55 L78 65 L98 92 L68 75 L60 108 L52 75 L22 92 L42 65 L8 55 L40 48 L20 20 L50 35 Z"/>
+      </svg>
+      <svg class="cert-highlight__deco cert-highlight__deco--squiggle" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M10 5 C 35 5, 5 25, 30 30 C 55 35, 15 50, 40 55 C 60 58, 25 75, 45 95" fill="none" stroke-width="9" stroke-linecap="round"/>
+      </svg>
+    {%- endif -%}
+
+  </div>
+</div>
+
+<style>
+  #cert-highlight-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;
+    overflow: hidden;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__inner {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    min-height: 400px;
+    overflow: hidden;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__left {
+    position: relative;
+    flex: 0 0 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 340px;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__blob {
+    position: absolute;
+    inset: 0;
+    background: {{ section.settings.left_color }};
+    border-radius: 38% 62% 55% 45% / 45% 40% 60% 55%;
+    transform: scale(1.15);
+    z-index: 0;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__left-image,
+  #cert-highlight-{{ section.id }} .cert-highlight__left-placeholder {
+    position: relative;
+    z-index: 1;
+    max-width: 85%;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__left-placeholder svg {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__right {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 60px;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__badge {
+    width: 72px;
+    height: auto;
+    margin-bottom: 18px;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__title {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0 0 18px;
+    font-weight: 500;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__text {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 520px;
+    color: currentColor;
+    opacity: 0.85;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__text--secondary {
+    margin-top: 18px;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__deco {
+    position: absolute;
+    fill: {{ section.settings.left_color }};
+    stroke: {{ section.settings.left_color }};
+    opacity: 0.9;
+    z-index: 0;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__deco--splat {
+    top: 6%;
+    right: 4%;
+    width: 70px;
+    height: 70px;
+  }
+
+  #cert-highlight-{{ section.id }} .cert-highlight__deco--squiggle {
+    bottom: 8%;
+    left: 42%;
+    width: 40px;
+    height: 70px;
+  }
+
+  @media screen and (max-width: 749px) {
+    #cert-highlight-{{ section.id }} .cert-highlight__inner {
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    #cert-highlight-{{ section.id }} .cert-highlight__left {
+      flex: none;
+      min-height: 280px;
+      padding: 30px 0;
+    }
+
+    #cert-highlight-{{ section.id }} .cert-highlight__right {
+      padding: 30px 24px 40px;
+      text-align: left;
+    }
+
+    #cert-highlight-{{ section.id }} .cert-highlight__title {
+      font-size: 22px;
+    }
+
+    #cert-highlight-{{ section.id }} .cert-highlight__deco {
+      display: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Certification Highlight",
+  "tag": "section",
+  "class": "section-certification-highlight",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background color",
+      "default": "#E9EAF6"
+    },
+    {
+      "type": "color",
+      "id": "left_color",
+      "label": "Left side / decoration color",
+      "default": "#D3D5E0"
+    },
+    {
+      "type": "header",
+      "content": "Left image"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left image"
+    },
+    {
+      "type": "header",
+      "content": "Certification content"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_image",
+      "label": "Certificate / badge image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "GREENGUARD Gold Certified"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Body text",
+      "default": "<p>Relax and breathe easy knowing your nursery is GREENGUARD Gold Certified.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "text_2",
+      "label": "Body text (second paragraph)",
+      "default": "<p>Greenguard Gold Certified products guarantee safer furniture for babies and peace of mind for parents.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_decoration",
+      "label": "Show decorative shapes",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Certification Highlight"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product"]
+  }
+}
+{% endschema %}
