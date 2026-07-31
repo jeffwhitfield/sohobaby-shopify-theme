@@ -17,8 +17,11 @@
         "newsletter_8fKPXV": {
           "type": "newsletter",
           "settings": {
+            "column_width": 28,
             "image": "shopify://shop_images/greenguard-logo-cropped.webp",
             "image_width": 85,
+            "image_position": "below",
+            "image_gap": 24,
             "heading": "Subscribe To Our Newsletter",
             "enable_form": true,
             "enable_follow_on_shop": true
@@ -27,6 +30,7 @@
         "menu_37Mqzm": {
           "type": "menu",
           "settings": {
+            "column_width": 17,
             "heading": "ABOUT US",
             "menu": "footer-about"
           }
@@ -34,6 +38,7 @@
         "menu_rgMyde": {
           "type": "menu",
           "settings": {
+            "column_width": 14,
             "heading": "COLLECTIONS",
             "menu": "footer-collection"
           }
@@ -41,6 +46,7 @@
         "menu_4K8tyJ": {
           "type": "menu",
           "settings": {
+            "column_width": 17,
             "heading": "Quick links",
             "menu": "footer"
           }
@@ -48,6 +54,7 @@
         "social_U6bCNx": {
           "type": "social",
           "settings": {
+            "column_width": 10,
             "heading": "Follow Us"
           }
         }
@@ -62,6 +69,15 @@
       "settings": {
         "color_scheme": "background-1",
         "background_color": "#6f78ac",
+        "columns_tablet": "2",
+        "column_gap": 48,
+        "row_gap": 40,
+        "heading_color": "#FFFFFF",
+        "link_color": "#FFFFFF",
+        "link_hover_color": "#E0E0E0",
+        "menu_item_spacing": 0,
+        "copyright_text": "",
+        "copyright_color": "",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
