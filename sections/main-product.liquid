@@ -82,7 +82,7 @@
           Assembly Instructions and Shipping and Returns.
         {%- endcomment -%}
         {%- liquid
-          assign description_accordion_rendered = false
+          assign collapsible_tabs_rendered = false
           assign has_description_block = false
           assign collapsible_tab_count = 0
           for b in section.blocks
@@ -236,7 +236,6 @@
               {%- endcomment -%}
               {%- if collapsible_tab_count == 0 and description_accordion != blank -%}
                 {{ description_accordion }}
-                {%- assign description_accordion_rendered = true -%}
               {%- endif -%}
             {%- when 'sku' -%}
               <p
@@ -251,76 +250,146 @@
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
-              {%- comment -%} Description row goes in first, before any other collapsible row {%- endcomment -%}
-              {%- if description_accordion_rendered == false and description_accordion != blank -%}
-                {{ description_accordion }}
-                {%- assign description_accordion_rendered = true -%}
-              {%- endif -%}
-              <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                <details id="Details-{{ block.id }}-{{ section.id }}">
-                  <summary>
-                    <div class="summary__title">
-                      {% render 'icon-accordion', icon: block.settings.icon %}
-                      <h2 class="h4 accordion__title inline-richtext">
-                        {{ block.settings.heading | default: block.settings.page.title }}
-                      </h2>
-                    </div>
-                    {% render 'icon-caret' %}
-                  </summary>
-                  <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                    {%- if block.settings.heading == 'Assembly Instructions' -%}
-                      {%- if product.metafields.custom.assembly_instructions_1_url -%}
-                        <p>
-                          <a href="{{ product.metafields.custom.assembly_instructions_1_url }}" target="_blank">
-                            {{-
-                              product.metafields.custom.assembly_instructions_1_title
-                              | default: 'Assembly Instructions'
-                            -}}
-                          </a>
-                        </p>
-                      {%- endif -%}
-                      {%- if product.metafields.custom.assembly_instructions_2_url -%}
-                        <p>
-                          <a href="{{ product.metafields.custom.assembly_instructions_2_url }}" target="_blank">
-                            {{-
-                              product.metafields.custom.assembly_instructions_2_title
-                              | default: 'Assembly Instructions'
-                            -}}
-                          </a>
-                        </p>
-                      {%- endif -%}
-                    {%- elsif block.settings.heading == 'Item Details' -%}
-                      {%- if product.metafields.custom.assembled_dimensions -%}
-                        <p>
-                          <strong>Assembled Dimensions:</strong><br>
-                          {{ product.metafields.custom.assembled_dimensions.value }}
-                        </p>
-                      {%- endif -%}
-                      {%- if product.metafields.custom.assembled_weight -%}
-                        <p>
-                          <strong>Assembled Weight:</strong><br>
-                          {{ product.metafields.custom.assembled_weight.value }} lb.
-                        </p>
-                      {%- endif -%}
-                      {%- if product.metafields.custom.dimensions -%}
-                        <p>
-                          <strong>Carton Dimensions:</strong><br>
-                          {{- product.metafields.custom.dimensions.value }}
-                        </p>
-                      {%- endif -%}
-                      {%- if product.metafields.custom.carton_weight -%}
-                        <p>
-                          <strong>Carton Weight:</strong><br>
-                          {{ product.metafields.custom.carton_weight.value }} lb.
-                        </p>
-                      {%- endif -%}
-                    {%- else -%}
-                      {{ block.settings.content }}
-                      {{ block.settings.page.content }}
-                    {%- endif -%}
+              {%- comment -%}
+                All collapsible rows are rendered together, in the order set by the
+                "Accordion row order" section setting, at the position of the first
+                collapsible row block. Later collapsible_tab blocks render nothing.
+              {%- endcomment -%}
+              {%- unless collapsible_tabs_rendered -%}
+                {%- liquid
+                  assign collapsible_tabs_rendered = true
+
+                  assign desc_heading = 'Description'
+                  if has_description_block
+                    assign desc_heading = description_block.settings.heading | default: 'Description'
+                  endif
+                  assign desc_key = desc_heading | downcase | replace: ' & ', ' and ' | replace: '&', 'and' | strip
+
+                  assign order_list = section.settings.accordion_order | split: ','
+                  assign ordered_ids = ','
+                  assign desc_in_list = false
+
+                  for name in order_list
+                    assign wanted = name | strip
+                    if wanted == blank
+                      continue
+                    endif
+                    assign wanted_key = wanted | downcase | replace: ' & ', ' and ' | replace: '&', 'and' | strip
+                    if wanted_key == desc_key
+                      assign desc_in_list = true
+                      assign ordered_ids = ordered_ids | append: '__description__,'
+                    else
+                      for tab in section.blocks
+                        if tab.type == 'collapsible_tab'
+                          assign tab_heading = tab.settings.heading | default: tab.settings.page.title | strip
+                          assign tab_key = tab_heading | downcase | replace: ' & ', ' and ' | replace: '&', 'and' | strip
+                          if tab_key == wanted_key
+                            assign id_token = ',' | append: tab.id | append: ','
+                            unless ordered_ids contains id_token
+                              assign ordered_ids = ordered_ids | append: tab.id | append: ','
+                            endunless
+                          endif
+                        endif
+                      endfor
+                    endif
+                  endfor
+
+                  comment
+                    Any collapsible row not named in the order setting keeps its
+                    theme editor position and renders after the ordered ones.
+                  endcomment
+                  for tab in section.blocks
+                    if tab.type == 'collapsible_tab'
+                      assign id_token = ',' | append: tab.id | append: ','
+                      unless ordered_ids contains id_token
+                        assign ordered_ids = ordered_ids | append: tab.id | append: ','
+                      endunless
+                    endif
+                  endfor
+
+                  assign ordered_id_list = ordered_ids | split: ','
+                -%}
+
+                {%- unless desc_in_list -%}
+                  {{ description_accordion }}
+                {%- endunless -%}
+
+                {%- for ordered_id in ordered_id_list -%}
+                  {%- if ordered_id == '__description__' -%}
+                    {{ description_accordion }}
+                  {%- else -%}
+                    {%- for tab in section.blocks -%}
+                      {%- if tab.type == 'collapsible_tab' and tab.id == ordered_id -%}
+                  <div class="product__accordion accordion quick-add-hidden" {{ tab.shopify_attributes }}>
+                    <details id="Details-{{ tab.id }}-{{ section.id }}">
+                      <summary>
+                        <div class="summary__title">
+                          {% render 'icon-accordion', icon: tab.settings.icon %}
+                          <h2 class="h4 accordion__title inline-richtext">
+                            {{ tab.settings.heading | default: tab.settings.page.title }}
+                          </h2>
+                        </div>
+                        {% render 'icon-caret' %}
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ tab.id }}-{{ section.id }}">
+                        {%- if tab.settings.heading == 'Assembly Instructions' -%}
+                          {%- if product.metafields.custom.assembly_instructions_1_url -%}
+                            <p>
+                              <a href="{{ product.metafields.custom.assembly_instructions_1_url }}" target="_blank">
+                                {{-
+                                  product.metafields.custom.assembly_instructions_1_title
+                                  | default: 'Assembly Instructions'
+                                -}}
+                              </a>
+                            </p>
+                          {%- endif -%}
+                          {%- if product.metafields.custom.assembly_instructions_2_url -%}
+                            <p>
+                              <a href="{{ product.metafields.custom.assembly_instructions_2_url }}" target="_blank">
+                                {{-
+                                  product.metafields.custom.assembly_instructions_2_title
+                                  | default: 'Assembly Instructions'
+                                -}}
+                              </a>
+                            </p>
+                          {%- endif -%}
+                        {%- elsif tab.settings.heading == 'Item Details' -%}
+                          {%- if product.metafields.custom.assembled_dimensions -%}
+                            <p>
+                              <strong>Assembled Dimensions:</strong><br>
+                              {{ product.metafields.custom.assembled_dimensions.value }}
+                            </p>
+                          {%- endif -%}
+                          {%- if product.metafields.custom.assembled_weight -%}
+                            <p>
+                              <strong>Assembled Weight:</strong><br>
+                              {{ product.metafields.custom.assembled_weight.value }} lb.
+                            </p>
+                          {%- endif -%}
+                          {%- if product.metafields.custom.dimensions -%}
+                            <p>
+                              <strong>Carton Dimensions:</strong><br>
+                              {{- product.metafields.custom.dimensions.value }}
+                            </p>
+                          {%- endif -%}
+                          {%- if product.metafields.custom.carton_weight -%}
+                            <p>
+                              <strong>Carton Weight:</strong><br>
+                              {{ product.metafields.custom.carton_weight.value }} lb.
+                            </p>
+                          {%- endif -%}
+                        {%- else -%}
+                          {{ tab.settings.content }}
+                          {{ tab.settings.page.content }}
+                        {%- endif -%}
+                      </div>
+                    </details>
                   </div>
-                </details>
-              </div>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endunless -%}
             {%- when 'quantity_selector' -%}
               {%- if product.metafields.custom.retailer_exclusive_url -%}
                 <p>
@@ -2623,6 +2692,17 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Product accordion"
+    },
+    {
+      "type": "text",
+      "id": "accordion_order",
+      "label": "Accordion row order",
+      "default": "Description, Item Details, Assembly Instructions, Shipping & Returns",
+      "info": "Comma separated. Names must match the collapsible row headings exactly. Any row not listed here appears at the end, in theme editor order."
     }
   ]
 }
