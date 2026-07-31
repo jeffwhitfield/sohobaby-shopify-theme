@@ -43,7 +43,11 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+            "heading": "Description",
+            "icon": "none",
+            "open_by_default": false
+          }
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
@@ -159,6 +163,7 @@
     },
     "custom_liquid_Vq4exd": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{% render 'related-products' %}",
         "color_scheme": "",
