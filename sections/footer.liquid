@@ -138,23 +138,7 @@
 
                 {%- comment -%} ---------- COLUMN 1: Newsletter with optional image ---------- {%- endcomment -%}
                 {%- when 'newsletter' -%}
-                  {%- if block.settings.image != blank -%}
-                    {%- assign nl_image_height = block.settings.image_width | divided_by: block.settings.image.aspect_ratio -%}
-                    <div
-                      class="footer-block__image-wrapper"
-                      style="max-width: min(100%, {{ block.settings.image_width }}px);"
-                    >
-                      {{
-                        block.settings.image
-                        | image_url: width: 1100
-                        | image_tag:
-                          loading: 'lazy',
-                          widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
-                          height: nl_image_height,
-                          width: block.settings.image_width
-                      }}
-                    </div>
-                  {%- endif -%}
+                  
 
                   {%- if block.settings.heading != blank -%}
                     <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
@@ -221,7 +205,23 @@
                       {%- endform -%}
                     </div>
                   {%- endif -%}
-
+                  {%- if block.settings.image != blank -%}
+                    {%- assign nl_image_height = block.settings.image_width | divided_by: block.settings.image.aspect_ratio -%}
+                    <div
+                      class="footer-block__image-wrapper"
+                      style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                    >
+                      {{
+                        block.settings.image
+                        | image_url: width: 1100
+                        | image_tag:
+                          loading: 'lazy',
+                          widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                          height: nl_image_height,
+                          width: block.settings.image_width
+                      }}
+                    </div>
+                  {%- endif -%}
                   {%- if shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
                     <div class="footer__follow-on-shop">
                       {% comment %} TODO: enable theme-check once `login_button` is accepted as valid filter {% endcomment %}
