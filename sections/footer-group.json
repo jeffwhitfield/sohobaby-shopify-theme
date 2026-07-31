@@ -66,6 +66,9 @@
         "menu_4K8tyJ",
         "social_U6bCNx"
       ],
+      "custom_css": [
+        ".list-menu__item--link{padding: 0}"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "background_color": "#6f78ac",
