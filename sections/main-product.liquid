@@ -84,6 +84,7 @@
         {%- liquid
           assign collapsible_tabs_rendered = false
           assign has_buy_buttons_block = false
+          assign has_share_block = false
           assign has_description_block = false
           assign collapsible_tab_count = 0
           for b in section.blocks
@@ -96,6 +97,10 @@
             endif
             if b.type == 'buy_buttons'
               assign has_buy_buttons_block = true
+            endif
+            if b.type == 'share'
+              assign has_share_block = true
+              assign share_block = b
             endif
           endfor
 
@@ -683,8 +688,10 @@
                 {{- block.settings.text -}}
               </a>
             {%- when 'share' -%}
-              {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
-              {% render 'share-button', block: block, share_link: share_url %}
+              {%- comment -%}
+                Printed at the very bottom instead, below the accordion rows.
+                See just after this block loop.
+              {%- endcomment -%}
 
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
@@ -879,6 +886,13 @@
               {% render 'icon-with-text', block: block %}
           {%- endcase -%}
         {%- endfor -%}
+
+        {%- comment -%} Share sits last, below the accordion rows {%- endcomment -%}
+        {%- if has_share_block -%}
+          {%- assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin -%}
+          {% render 'share-button', block: share_block, share_link: share_url %}
+        {%- endif -%}
+
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
