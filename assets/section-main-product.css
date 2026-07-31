@@ -201,17 +201,17 @@ fieldset.product-form__input .form__label {
   color: rgb(var(--color-foreground));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 4px;
-  font-size: 0;
+  padding: 4px 7px 4px 4px;
+  font-size: 14px;
   letter-spacing: 0;
-  line-height: 0;
+  line-height: 33px;
   text-align: center;
   transition: border var(--duration-short) ease;
   cursor: pointer;
   position: relative;
 }
 .product-form__input .swatch-value {
-  padding-left: 2.25rem;
+  padding-left:40px;
 }
 .product-form__input .swatch-value.no-swatch {
   padding-left: 0;
