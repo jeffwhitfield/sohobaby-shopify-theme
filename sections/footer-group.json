@@ -21,7 +21,7 @@
             "image": "shopify://shop_images/greenguard-logo-cropped.webp",
             "image_width": 85,
             "image_position": "below",
-            "image_gap": 24,
+            "image_gap": 50,
             "heading": "Subscribe To Our Newsletter",
             "enable_form": true,
             "enable_follow_on_shop": true
