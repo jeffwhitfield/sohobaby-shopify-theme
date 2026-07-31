@@ -27,15 +27,15 @@
         "menu_37Mqzm": {
           "type": "menu",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "ABOUT US",
+            "menu": "footer-about"
           }
         },
         "menu_rgMyde": {
           "type": "menu",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "COLLECTIONS",
+            "menu": "footer-collection"
           }
         },
         "menu_4K8tyJ": {
@@ -61,7 +61,7 @@
       ],
       "settings": {
         "color_scheme": "background-1",
-        "background_color": "#6F78AC",
+        "background_color": "#6f78ac",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
