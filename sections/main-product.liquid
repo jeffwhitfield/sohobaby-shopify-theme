@@ -95,6 +95,7 @@
             endif
           endfor
         -%}
+        {%- assign description_icon = description_block.settings.icon | default: 'ruler' -%}
         {%- if has_description_block and product.description != blank -%}
           {%- capture description_accordion -%}
             <div class="product__accordion accordion quick-add-hidden" {{ description_block.shopify_attributes }}>
@@ -106,7 +107,7 @@
               >
                 <summary>
                   <div class="summary__title">
-                    {% render 'icon-accordion', icon: description_block.settings.icon %}
+                    {% render 'icon-accordion', icon: description_icon %}
                     <h2 class="h4 accordion__title inline-richtext">
                       {{- description_block.settings.heading | default: 'Description' -}}
                     </h2>
@@ -1353,7 +1354,7 @@
               "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
             }
           ],
-          "default": "none",
+          "default": "ruler",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
         },
         {
