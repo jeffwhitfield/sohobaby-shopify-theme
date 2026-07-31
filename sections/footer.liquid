@@ -126,7 +126,21 @@
   .footer-block--social-column .footer__list-social {
     margin-top: 1rem;
   }
-
+  .section-sections--15413649834053__footer-padding:after{
+    content:"";
+    position:absolute,
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-image:url(https://cdn.shopify.com/s/files/1/0580/0846/9573/files/icons.png?v=1785531223);
+    display:relative,
+    zindex:2;
+  }
+    .section-sections--15413649834053__footer-padding .footer__content-top,
+    .section-sections--15413649834053__footer-padding .footer__content-bottom.scroll-trigger.animate--slide-in{
+      z-index:4;
+    }
   {%- if copyright_color != blank and copyright_color != transparent %}
     .footer__copyright,
     .footer__copyright a,
@@ -162,7 +176,7 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer clss="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
