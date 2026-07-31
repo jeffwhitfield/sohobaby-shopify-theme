@@ -67,7 +67,7 @@
         "social_U6bCNx"
       ],
       "custom_css": [
-        ".list-menu__item--link{padding: 0}"
+        ".footer .footer-block--menu .list-menu__item--link {padding: 0;}"
       ],
       "settings": {
         "color_scheme": "background-1",
