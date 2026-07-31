@@ -1,4 +1,30 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
+
+{%- liquid
+  comment
+    Build the desktop column template from each block's own width setting.
+    Values are used as fr units, so if they add up to 100 each number is a real percentage.
+  endcomment
+  assign content_blocks_count = 0
+  assign col_template = ''
+  for block in section.blocks
+    unless block.type == 'svg_decoration'
+      assign content_blocks_count = content_blocks_count | plus: 1
+      assign col_w = block.settings.column_width | default: 20
+      assign col_template = col_template | append: col_w | append: 'fr '
+    endunless
+  endfor
+  assign col_template = col_template | strip
+  if col_template == blank
+    assign col_template = '1fr'
+  endif
+
+  assign heading_color = section.settings.heading_color
+  assign link_color = section.settings.link_color
+  assign link_hover_color = section.settings.link_hover_color
+  assign copyright_color = section.settings.copyright_color
+  assign transparent = 'rgba(0,0,0,0)'
+-%}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
@@ -44,17 +70,70 @@
   .footer__decoration--center { top: 50%; left: 50%; transform: translate(-50%, -50%); }
   .footer__decoration--desktop-only { display: none; }
 
-  .footer__blocks-wrapper--5-col-desktop {
-    grid-template-columns: repeat(2, 1fr);
+  /* ---- Column grid: real CSS grid, overrides Dawn's flexbox .grid ---- */
+  #FooterGrid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: {{ section.settings.column_gap | times: 0.5 | round: 0 }}px;
+    row-gap: {{ section.settings.row_gap }}px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #FooterGrid-{{ section.id }} > .grid__item {
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 0;
+    margin: 0;
+    flex: none;
+  }
+
+  #FooterGrid-{{ section.id }} .footer-block__heading {
+    margin-bottom: 1rem;
+    {%- if heading_color != blank and heading_color != transparent %}
+      color: {{ heading_color }};
+    {%- endif %}
+  }
+
+  {%- if link_color != blank and link_color != transparent %}
+    #FooterGrid-{{ section.id }} .footer-block__details-content a,
+    #FooterGrid-{{ section.id }} .list-menu__item,
+    #FooterGrid-{{ section.id }} .footer-block__details-content,
+    #FooterGrid-{{ section.id }} .rte a {
+      color: {{ link_color }};
+    }
+  {%- endif %}
+
+  {%- if link_hover_color != blank and link_hover_color != transparent %}
+    #FooterGrid-{{ section.id }} .footer-block__details-content a:hover,
+    #FooterGrid-{{ section.id }} .list-menu__item:hover,
+    #FooterGrid-{{ section.id }} .rte a:hover {
+      color: {{ link_hover_color }};
+      text-decoration: underline;
+    }
+  {%- endif %}
+
+  #FooterGrid-{{ section.id }} .footer-block__details-content li {
+    margin-bottom: {{ section.settings.menu_item_spacing }}px;
   }
 
   .footer-block--newsletter-column .footer-block__image-wrapper {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
   }
 
   .footer-block--social-column .footer__list-social {
     margin-top: 1rem;
   }
+
+  {%- if copyright_color != blank and copyright_color != transparent %}
+    .footer__copyright,
+    .footer__copyright a,
+    .footer__copyright .copyright__content {
+      color: {{ copyright_color }};
+    }
+  {%- endif %}
 
   @media screen and (min-width: 750px) {
     .footer {
@@ -69,11 +148,16 @@
     .footer__decoration--desktop-only {
       display: block;
     }
+
+    #FooterGrid-{{ section.id }} {
+      grid-template-columns: repeat({{ section.settings.columns_tablet }}, minmax(0, 1fr));
+      column-gap: {{ section.settings.column_gap }}px;
+    }
   }
 
   @media screen and (min-width: 990px) {
-    .footer__blocks-wrapper--5-col-desktop {
-      grid-template-columns: repeat(5, 1fr);
+    #FooterGrid-{{ section.id }} {
+      grid-template-columns: {{ col_template }};
     }
   }
 {%- endstyle -%}
@@ -85,12 +169,6 @@
       assign has_social_icons = false
     endif
 
-    assign content_blocks_count = 0
-    for block in section.blocks
-      unless block.type == 'svg_decoration'
-        assign content_blocks_count = content_blocks_count | plus: 1
-      endunless
-    endfor
   -%}
 
   {%- comment -%} Decorative SVG artwork, positioned independently of the column grid {%- endcomment -%}
@@ -108,18 +186,9 @@
 
   {%- if content_blocks_count > 0 -%}
     <div class="footer__content-top page-width">
-      {%- liquid
-        assign footer_grid_class = ''
-        if content_blocks_count == 5
-          assign footer_grid_class = 'footer__blocks-wrapper--5-col-desktop'
-        elsif content_blocks_count > 6
-          assign footer_grid_class = 'grid--4-col-desktop'
-        elsif content_blocks_count > 4
-          assign footer_grid_class = 'grid--3-col-tablet'
-        endif
-      -%}
       <div
-        class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        id="FooterGrid-{{ section.id }}"
+        class="footer__blocks-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         {% if settings.animations_reveal_on_scroll %}
           data-cascade
         {% endif %}
@@ -138,7 +207,23 @@
 
                 {%- comment -%} ---------- COLUMN 1: Newsletter with optional image ---------- {%- endcomment -%}
                 {%- when 'newsletter' -%}
-                  
+                  {%- if block.settings.image != blank and block.settings.image_position == 'above' -%}
+                    {%- assign nl_image_height = block.settings.image_width | divided_by: block.settings.image.aspect_ratio -%}
+                    <div
+                      class="footer-block__image-wrapper"
+                      style="max-width: min(100%, {{ block.settings.image_width }}px); margin-bottom: {{ block.settings.image_gap }}px;"
+                    >
+                      {{
+                        block.settings.image
+                        | image_url: width: 1100
+                        | image_tag:
+                          loading: 'lazy',
+                          widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                          height: nl_image_height,
+                          width: block.settings.image_width
+                      }}
+                    </div>
+                  {%- endif -%}
 
                   {%- if block.settings.heading != blank -%}
                     <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
@@ -205,11 +290,11 @@
                       {%- endform -%}
                     </div>
                   {%- endif -%}
-                  {%- if block.settings.image != blank -%}
+                  {%- if block.settings.image != blank and block.settings.image_position != 'above' -%}
                     {%- assign nl_image_height = block.settings.image_width | divided_by: block.settings.image.aspect_ratio -%}
                     <div
                       class="footer-block__image-wrapper"
-                      style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                      style="max-width: min(100%, {{ block.settings.image_width }}px); margin-top: {{ block.settings.image_gap }}px;"
                     >
                       {{
                         block.settings.image
@@ -405,9 +490,23 @@
     {%- comment -%} Second row: copyright text only {%- endcomment -%}
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
-        <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
-        </small>
+        {%- liquid
+          assign custom_copyright = section.settings.copyright_text
+          if custom_copyright != blank
+            assign current_year = 'now' | date: '%Y'
+            assign year_token = '{year}'
+            assign shop_token = '{shop}'
+            assign custom_copyright = custom_copyright | replace: year_token, current_year
+            assign custom_copyright = custom_copyright | replace: shop_token, shop.name
+          endif
+        -%}
+        {%- if custom_copyright != blank -%}
+          <small class="copyright__content">{{ custom_copyright }}</small>
+        {%- else -%}
+          <small class="copyright__content"
+            >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          </small>
+        {%- endif -%}
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -438,6 +537,17 @@
       "name": "Newsletter column",
       "settings": [
         {
+          "type": "range",
+          "id": "column_width",
+          "min": 5,
+          "max": 60,
+          "step": 1,
+          "unit": "%",
+          "label": "Column width (desktop)",
+          "default": 24,
+          "info": "Relative width. Make all the columns add up to 100 for exact percentages."
+        },
+        {
           "type": "paragraph",
           "content": "First footer column. Add an optional image plus your newsletter signup form."
         },
@@ -455,6 +565,32 @@
           "unit": "px",
           "label": "Image width",
           "default": 150
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position",
+          "options": [
+            {
+              "value": "above",
+              "label": "Above heading"
+            },
+            {
+              "value": "below",
+              "label": "Below newsletter form"
+            }
+          ],
+          "default": "below"
+        },
+        {
+          "type": "range",
+          "id": "image_gap",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Space between form and image",
+          "default": 24
         },
         {
           "type": "inline_richtext",
@@ -481,6 +617,17 @@
       "name": "Menu column",
       "settings": [
         {
+          "type": "range",
+          "id": "column_width",
+          "min": 5,
+          "max": 60,
+          "step": 1,
+          "unit": "%",
+          "label": "Column width (desktop)",
+          "default": 19,
+          "info": "Relative width. Make all the columns add up to 100 for exact percentages."
+        },
+        {
           "type": "inline_richtext",
           "id": "heading",
           "default": "Quick links",
@@ -499,6 +646,17 @@
       "type": "social",
       "name": "Social column",
       "settings": [
+        {
+          "type": "range",
+          "id": "column_width",
+          "min": 5,
+          "max": 60,
+          "step": 1,
+          "unit": "%",
+          "label": "Column width (desktop)",
+          "default": 19,
+          "info": "Relative width. Make all the columns add up to 100 for exact percentages."
+        },
         {
           "type": "inline_richtext",
           "id": "heading",
@@ -539,11 +697,26 @@
           "id": "position",
           "label": "Position",
           "options": [
-            { "value": "top-left", "label": "Top left" },
-            { "value": "top-right", "label": "Top right" },
-            { "value": "bottom-left", "label": "Bottom left" },
-            { "value": "bottom-right", "label": "Bottom right" },
-            { "value": "center", "label": "Center" }
+            {
+              "value": "top-left",
+              "label": "Top left"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom right"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            }
           ],
           "default": "top-left"
         },
@@ -559,6 +732,17 @@
       "type": "link_list",
       "name": "t:sections.footer.blocks.link_list.name",
       "settings": [
+        {
+          "type": "range",
+          "id": "column_width",
+          "min": 5,
+          "max": 60,
+          "step": 1,
+          "unit": "%",
+          "label": "Column width (desktop)",
+          "default": 19,
+          "info": "Relative width. Make all the columns add up to 100 for exact percentages."
+        },
         {
           "type": "inline_richtext",
           "id": "heading",
@@ -579,6 +763,17 @@
       "name": "t:sections.footer.blocks.text.name",
       "settings": [
         {
+          "type": "range",
+          "id": "column_width",
+          "min": 5,
+          "max": 60,
+          "step": 1,
+          "unit": "%",
+          "label": "Column width (desktop)",
+          "default": 19,
+          "info": "Relative width. Make all the columns add up to 100 for exact percentages."
+        },
+        {
           "type": "inline_richtext",
           "id": "heading",
           "default": "Heading",
@@ -596,6 +791,17 @@
       "type": "image",
       "name": "Image",
       "settings": [
+        {
+          "type": "range",
+          "id": "column_width",
+          "min": 5,
+          "max": 60,
+          "step": 1,
+          "unit": "%",
+          "label": "Column width (desktop)",
+          "default": 19,
+          "info": "Relative width. Make all the columns add up to 100 for exact percentages."
+        },
         {
           "type": "image_picker",
           "id": "image",
@@ -646,6 +852,99 @@
       "id": "background_color",
       "label": "Custom background color",
       "info": "Overrides the color scheme background. Leave blank to use the color scheme above."
+    },
+    {
+      "type": "header",
+      "content": "Column layout"
+    },
+    {
+      "type": "paragraph",
+      "content": "Set each column's width inside that column's own block settings. Widths only apply on desktop (990px and up)."
+    },
+    {
+      "type": "select",
+      "id": "columns_tablet",
+      "label": "Columns on tablet",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Space between columns",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Space between rows",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Column colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Column title color",
+      "info": "Leave blank to use the color scheme."
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Menu item color"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Menu item hover color"
+    },
+    {
+      "type": "range",
+      "id": "menu_item_spacing",
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Space between menu items",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "copyright_text",
+      "label": "Copyright text",
+      "info": "Leave blank to use the default. Use {year} for the current year and {shop} for your store name."
+    },
+    {
+      "type": "color",
+      "id": "copyright_color",
+      "label": "Copyright text color"
     },
     {
       "type": "header",
