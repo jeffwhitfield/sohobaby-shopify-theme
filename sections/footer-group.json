@@ -47,7 +47,7 @@
           "type": "menu",
           "settings": {
             "column_width": 17,
-            "heading": "Quick links",
+            "heading": "CUSTOMER SUPPORT",
             "menu": "footer"
           }
         },
@@ -55,7 +55,7 @@
           "type": "social",
           "settings": {
             "column_width": 10,
-            "heading": "Follow Us"
+            "heading": "FOLLOW US"
           }
         }
       },
