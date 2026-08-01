@@ -17,9 +17,8 @@
       ],
       "name": "Video hero",
       "settings": {
-        "video": "shopify://files/videos/Soho.mp4",
-        "fallback_image": "shopify://shop_images/Everlee-Island-Crib-Brown-Angle-Lifestyle.webp",
-        "section_height": "vh_65",
+        "fallback_image": "shopify://shop_images/Ox_-_So_-_Meridian_Hero_1.png",
+        "section_height": "vh_85",
         "overlay_color": "#000000",
         "overlay_opacity": 40,
         "title": "The Nursery You've Been Dreaming Of Starts Here.",
