@@ -20,7 +20,7 @@
         "fallback_image": "shopify://shop_images/Ox_-_So_-_Meridian_Hero_1.png",
         "section_height": "vh_85",
         "overlay_color": "#000000",
-        "overlay_opacity": 40,
+        "overlay_opacity": 25,
         "title": "The Nursery You've Been Dreaming Of Starts Here.",
         "heading_font_size": 68,
         "heading_color": "#ffffff",
