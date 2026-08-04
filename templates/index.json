@@ -27,8 +27,8 @@
         "text": "",
         "text_font_size": 28,
         "text_color": "#ffffff",
-        "button_label": "Shop now",
-        "button_link": "shopify://collections",
+        "button_label": "",
+        "button_link": "",
         "button_style_secondary": false
       }
     },
