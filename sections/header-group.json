@@ -52,7 +52,7 @@
         ".header__inline-menu > .list-menu .header__menu-item {font-size: 1.5rem;}",
         ".header__icons > .header__search {display: none;}",
         "a.header__icon.header__icon--account.link.focus-inset.small-hide {display: none;}",
-        ".ocu-cart-drawer button,.ocu-checkout-button {width: 100%;}"
+        ".ocu-cart-footer button,.ocu-checkout-button {width: 100%;}"
       ],
       "settings": {
         "logo_position": "top-center",
