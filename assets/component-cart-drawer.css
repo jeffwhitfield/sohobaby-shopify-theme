@@ -401,7 +401,10 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .cart-drawer .quantity-popover__info + .cart-item__error {
   margin-top: 0.2rem;
 }
-
+.ocu-cart-footer button,
+.ocu-checkout-button {
+  width: 100%;
+}
 @media screen and (min-width: 750px) {
   .cart-drawer .cart-item__quantity--info quantity-popover > * {
     padding-left: 0;
