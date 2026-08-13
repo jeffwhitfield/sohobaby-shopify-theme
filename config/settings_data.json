@@ -203,7 +203,7 @@
       },
       "9508235472506026167": {
         "type": "shopify://apps/sg-notify-me-back-in-stock/blocks/notifyme-embed/149ed091-61ef-46c4-964d-eddbebe30e92",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "button_position": "right",
           "side_button_text": "Notify Me!",
