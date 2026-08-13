@@ -310,14 +310,21 @@
                 {% when 'discount' %}
                   
                   {% assign d_total = filter.values.size %}
-                  {{ d_total  }}
+
+
+                  {% assign discount_min = 0 %}
+                  {% assign discount_max = 0 %}
+                  
                   {%- for value in filter.values -%}
-                    {{ value.value }}
+                    {% if forloop.first %}
+                      {% assign discount_min = value.value %}
+                    {% endif %}
+
+                    {% if forloop.last %}
+                      {% assign discount_max = value.value | last %}
+                    {% endif %}
                   {%- endfor -%}
 
-                  {% assign discount_min = filter.values | first %}
-                  {% assign discount_max = filter.values | last %}
-                  
                   <details
                     id="Details-Discount-{{ section.id }}"
                     class="facets__disclosure-vertical js-filter"
