@@ -310,6 +310,7 @@
                 {% when 'discount' %}
                   {% assign discount_min = filter.values | first %}
                   {% assign discount_max = filter.values | last %}
+                  {{ discount_min }}
 
                   <details
                     id="Details-Discount-{{ section.id }}"
