@@ -113,7 +113,7 @@
             {%- for filter in results.filters -%}
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% assign f_type = filter.type %}
-              {{ f_type }}
+              {% assign f_label = filter.label | downcase %}
               {% case f_type %}
                 {% when 'boolean', 'list' %}
                   <details
