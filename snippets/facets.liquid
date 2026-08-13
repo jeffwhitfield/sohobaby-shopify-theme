@@ -115,7 +115,7 @@
               {% assign f_type = filter.type %}
               {% assign f_label = filter.label | downcase %}
               {% if f_label == 'discount' %}
-                {% assign f_type = 'price_range' %}
+                {% assign f_type = 'discount' %}
               {% endif %}
               {% case f_type %}
                 {% when 'boolean', 'list' %}
@@ -305,6 +305,61 @@
                           </button>
                         </show-more-button>
                       {%- endif %}
+                    </div>
+                  </details>
+                {% when 'discount' %}
+                  {% assign discount_min = 0 %}
+                  {% assign discount_max = 100 %}
+
+                  <details
+                    id="Details-Discount-{{ section.id }}"
+                    class="facets__disclosure-vertical js-filter"
+                    open
+                  >
+                    <summary class="facets__summary caption-large focus-offset">
+                      <div>
+                        <span>Discount</span>
+                        {% render 'icon-caret' %}
+                      </div>
+                    </summary>
+
+                    <div
+                      id="Facet-Discount-{{ section.id }}"
+                      class="facets__display-vertical discount-range-filter"
+                    >
+                      <div class="discount-range-values">
+                        <span>
+                          <span id="DiscountMin-{{ section.id }}">{{ discount_min }}</span>%
+                        </span>
+
+                        <span>
+                          <span id="DiscountMax-{{ section.id }}">{{ discount_max }}</span>%
+                        </span>
+                      </div>
+
+                      <div class="discount-range">
+                        <div class="discount-range__track"></div>
+
+                        <input
+                          type="range"
+                          id="DiscountRangeMin-{{ section.id }}"
+                          min="0"
+                          max="100"
+                          value="0"
+                          step="1"
+                          aria-label="Minimum discount"
+                        >
+
+                        <input
+                          type="range"
+                          id="DiscountRangeMax-{{ section.id }}"
+                          min="0"
+                          max="100"
+                          value="100"
+                          step="1"
+                          aria-label="Maximum discount"
+                        >
+                      </div>
                     </div>
                   </details>
                 {% when 'price_range' %}
