@@ -3750,7 +3750,9 @@ responsive
   background-color: #b61b1c;
   color: #ffffff;
 }
-
+.modal90 .modal90-container .modal90-right{
+  display:none;
+}
 
 
 @media (max-width: 767px) {
