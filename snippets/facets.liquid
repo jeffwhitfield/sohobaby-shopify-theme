@@ -114,7 +114,7 @@
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% assign f_type = filter.type %}
               {{ f_type }}
-              {% case filter.type %}
+              {% case f_type %}
                 {% when 'boolean', 'list' %}
                   <details
                     id="Details-{{ forloop.index }}-{{ section.id }}"
