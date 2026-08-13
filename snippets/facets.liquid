@@ -115,7 +115,7 @@
               {% assign f_type = filter.type %}
               {% assign f_label = filter.label | downcase %}
               {% if f_label == 'discount' %}
-                111
+                {% assign f_type = 'price_range' %}
               {% endif %}
               {% case f_type %}
                 {% when 'boolean', 'list' %}
