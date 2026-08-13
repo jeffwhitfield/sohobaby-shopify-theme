@@ -41,6 +41,19 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_McPWVq": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<!-- Semget Embed HTML !-->\n            <script>\n                var semgetshopdomain = '{{- shop.permanent_domain | escape -}}';\n            \tvar semgetProductSpecs = {{- product | json }};\n            \tvar semgetCurVarId = '{{- product.selected_or_first_available_variant.id -}}';\n            \tvar semgetVariantSpecs = {};\n            \t{%- for variant in product.variants -%} \n            \tsemgetVariantSpecs[{{- variant.id -}}] = {{- variant | json -}};\n            \t{%- endfor -%}\n            </script>\n            <div id=\"semgetembed\" data-btnclass=\"abcsemget\" data-text=\"Notify me\" data-textcolor=\"#ed2c24\" data-buttonbg=\"#ffffff\" data-buttonborder=\"#c679ab\" \n            data-hovercolor=\"#c679ab\" data-hovertextcolor=\"#ffffff\" data-width=\"100\" data-radious=\"14\" data-popupclass=\"semgetpopup\"\n            data-popuphead=\"Notify Me When Available\" data-popupsubhead=\"Fill in the required details to get notified when the product is again in stock!\" \n            data-nametext=\"Name\" data-emailtext=\"Email\" data-popupbtn=\"Notify Me\" data-popupimg=\"https://cdn.shopify.com/s/files/1/0580/0846/9573/files/41336870_2.jpg?v=1782837285\"\n            data-thanksmsg=\"Thanks, We Will Notify You When Product Back In Stock!!\" data-popupheadcolor=\"#55311C\"  data-popupsubheadcolor=\"#4A4A4A\"\n            data-popuplabelcolor=\"#8C7569\" data-popupbtncolor=\"#ED2C24\" data-popupbtntextcolor=\"#FFFFFF\" data-thanksmsgcolor=\"#F15B29\"\n            >\n            </div>\n            <!-- Semget Embed HTML !-->"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -85,19 +98,6 @@
         "vimg_multiple_variant_images_app_block_zLmNUP": {
           "type": "shopify://apps/vimg-multiple-variant-images/blocks/app.block/3fcfc3bb-b4e3-44bd-9ff9-3d525461bb38",
           "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "custom_liquid_McPWVq": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<!-- Semget Embed HTML !-->\n            <script>\n                var semgetshopdomain = '{{- shop.permanent_domain | escape -}}';\n            \tvar semgetProductSpecs = {{- product | json }};\n            \tvar semgetCurVarId = '{{- product.selected_or_first_available_variant.id -}}';\n            \tvar semgetVariantSpecs = {};\n            \t{%- for variant in product.variants -%} \n            \tsemgetVariantSpecs[{{- variant.id -}}] = {{- variant | json -}};\n            \t{%- endfor -%}\n            </script>\n            <div id=\"semgetembed\" data-btnclass=\"abcsemget\" data-text=\"Notify me\" data-textcolor=\"#ed2c24\" data-buttonbg=\"#ffffff\" data-buttonborder=\"#c679ab\" \n            data-hovercolor=\"#c679ab\" data-hovertextcolor=\"#ffffff\" data-width=\"100\" data-radious=\"14\" data-popupclass=\"semgetpopup\"\n            data-popuphead=\"Notify Me When Available\" data-popupsubhead=\"Fill in the required details to get notified when the product is again in stock!\" \n            data-nametext=\"Name\" data-emailtext=\"Email\" data-popupbtn=\"Notify Me\" data-popupimg=\"https://cdn.shopify.com/s/files/1/0580/0846/9573/files/41336870_2.jpg?v=1782837285\"\n            data-thanksmsg=\"Thanks, We Will Notify You When Product Back In Stock!!\" data-popupheadcolor=\"#55311C\"  data-popupsubheadcolor=\"#4A4A4A\"\n            data-popuplabelcolor=\"#8C7569\" data-popupbtncolor=\"#ED2C24\" data-popupbtntextcolor=\"#FFFFFF\" data-thanksmsgcolor=\"#F15B29\"\n            >\n            </div>\n            <!-- Semget Embed HTML !-->"
-          }
         }
       },
       "block_order": [
@@ -107,14 +107,14 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "buy_buttons",
+        "custom_liquid_McPWVq",
         "description",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
         "share",
-        "vimg_multiple_variant_images_app_block_zLmNUP",
-        "buy_buttons",
-        "custom_liquid_McPWVq"
+        "vimg_multiple_variant_images_app_block_zLmNUP"
       ],
       "settings": {
         "enable_sticky_info": true,
