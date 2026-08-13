@@ -321,7 +321,7 @@
                     {% endif %}
 
                     {% if forloop.last %}
-                      {% assign discount_max = value.value | last %}
+                      {% assign discount_max = value.value %}
                     {% endif %}
                   {%- endfor -%}
 
