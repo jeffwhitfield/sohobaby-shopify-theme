@@ -308,9 +308,12 @@
                     </div>
                   </details>
                 {% when 'discount' %}
+                  {{ filter.values | json }}
                   {% assign discount_min = filter.values | first %}
                   {% assign discount_max = filter.values | last %}
                   
+                  {% assign discount_min = discount_min.value %}
+                  {% assign discount_max = discount_max.value %}
 
                   <details
                     id="Details-Discount-{{ section.id }}"
