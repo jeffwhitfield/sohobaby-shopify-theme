@@ -309,10 +309,10 @@
                   </details>
                 {% when 'discount' %}
                   
-
+                  {% assign d_total = filter.values.size %}
+                  {{ d_total  }}
                   {%- for value in filter.values -%}
-                            {{ value.value }}
-
+                    {{ value.value }}
                   {%- endfor -%}
 
                   {% assign discount_min = filter.values | first %}
