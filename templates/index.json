@@ -17,7 +17,7 @@
       ],
       "name": "Video hero",
       "settings": {
-        "fallback_image": "shopify://shop_images/Ox_-_So_-_Meridian_Hero_1_1.png",
+        "fallback_image": "shopify://shop_images/So_Meridian_Hero.png",
         "section_height": "vh_100",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
