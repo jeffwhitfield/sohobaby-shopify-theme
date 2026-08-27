@@ -27,6 +27,19 @@
             "text_style": "subtitle"
           }
         },
+        "text_tB48J3": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Item Number:- </strong>",
+            "text_style": "subtitle"
+          }
+        },
+        "sku_Qh7TRx": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -104,6 +117,8 @@
         "judge_me_reviews_preview_badge_GALyLT",
         "title",
         "caption",
+        "text_tB48J3",
+        "sku_Qh7TRx",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -115,6 +130,10 @@
         "collapsible-row-3",
         "share",
         "vimg_multiple_variant_images_app_block_zLmNUP"
+      ],
+      "custom_css": [
+        "p.product__sku {margin: 0 0 0 15px; display: inline-block; line-height: 1.1em; position: relative; vertical-align: middle;}",
+        "p.product__text.inline-richtext.subtitle {line-height: 1em; display: inline-block; position: relative; vertical-align: middle; margin: 0;}"
       ],
       "settings": {
         "enable_sticky_info": true,
