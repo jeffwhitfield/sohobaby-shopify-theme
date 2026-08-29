@@ -136,7 +136,8 @@
         "p.product__text.inline-richtext.subtitle {line-height: 1em; display: inline-block; position: relative; vertical-align: middle; margin: 0;}",
         ".soho-qty-row {display: flex; align-items: flex-end; gap: 2.5rem; flex-wrap: wrap;}",
         ".soho-type-badge img {display: block; height: auto; max-width: 67px;}",
-        "@media screen and (max-width: 749px) {.soho-type-badge img {max-width: 50px; }}"
+        "@media screen and (max-width: 749px) {.soho-type-badge img {max-width: 50px; }}",
+        ".soho-qty-row .product-form__input {flex: 0 0 50%;}"
       ],
       "settings": {
         "enable_sticky_info": true,
