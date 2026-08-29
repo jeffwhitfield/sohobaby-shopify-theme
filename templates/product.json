@@ -194,8 +194,8 @@
       "settings": {
         "custom_liquid": "{% render 'related-products' %}",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     },
     "170978907970d49d04": {
