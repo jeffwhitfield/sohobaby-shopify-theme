@@ -30,7 +30,7 @@
         "text_tB48J3": {
           "type": "text",
           "settings": {
-            "text": "I<strong>tem Number:</strong>",
+            "text": "<strong>Item Number:</strong>",
             "text_style": "subtitle"
           }
         },
