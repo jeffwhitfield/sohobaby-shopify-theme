@@ -190,7 +190,6 @@
     },
     "custom_liquid_Vq4exd": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
         "custom_liquid": "{% render 'related-products' %}",
         "color_scheme": "",
