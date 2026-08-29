@@ -1,0 +1,15 @@
+{%- liquid
+  assign allowed_types = 'cribs,guard rails,conversion kits' | split: ','
+  assign current_type = product.type | downcase | strip
+-%}
+
+{%- if allowed_types contains current_type -%}
+  <div class="soho-type-badge">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0580/0846/9573/files/greenguard-logo-cropped.webp?v=1785439455"
+      alt="Green Guard Gold Certified"
+      width="67"
+      height="90"
+      loading="lazy">
+  </div>
+{%- endif -%}
