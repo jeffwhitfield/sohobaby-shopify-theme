@@ -172,6 +172,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "Complete The Set",
         "heading_size": "h2",
