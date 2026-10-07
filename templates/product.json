@@ -157,6 +157,7 @@
     },
     "certification_highlight_q4KUtY": {
       "type": "certification-highlight",
+      "disabled": true,
       "custom_css": [],
       "name": "Certification Highlight",
       "settings": {
@@ -165,7 +166,7 @@
         "left_image": "shopify://shop_images/Everlee-4in1-Convertible-Crib-Gray-Front.jpg",
         "badge_image": "shopify://shop_images/greenguard-logo-cropped.webp",
         "title": "GREENGUARD Gold Certified",
-        "text": "<p>Relax and breathe easy knowing your nursery is GREENGUARD Gold Certified. Greenguard Gold certified products are tested for over 15,000 chemicals and VOC’s, ensuring low emissions and healthier indoor air inside your baby’s nursery. Because newborns spend up to 90% of their time indoors, and sleep for up to 19 hours per day, it is essential for them to have a healthy environment in their nursery.</p>",
+        "text": "<p>Relax and breathe easy knowing your nursery is&nbsp;GREENGUARD Gold Certified. Greenguard Gold certified products are tested for over 15,000 chemicals and VOC’s, ensuring low emissions and healthier indoor air inside your baby’s nursery. Because newborns spend up to 90% of their time indoors, and sleep for up to 19 hours per day, it is essential for them to have a healthy environment in their nursery.</p>",
         "text_2": "<p>Greenguard Gold Certified products guarantee safer furniture for babies and peace of mind for parents.</p>",
         "show_decoration": true,
         "padding_top": 0,
@@ -198,7 +199,7 @@
       "settings": {
         "custom_liquid": "{% render 'related-products' %}",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 40
       }
     },
