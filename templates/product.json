@@ -157,7 +157,10 @@
     },
     "certification_highlight_q4KUtY": {
       "type": "certification-highlight",
-      "custom_css": [],
+      "custom_css": [
+        "..cert-highlight__inner {max-width: 100%;}",
+        ".cert-highlight__left {flex: 0 0 50%;}"
+      ],
       "name": "Certification Highlight",
       "settings": {
         "background_color": "#F0F0F8",
