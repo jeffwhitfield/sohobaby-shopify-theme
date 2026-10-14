@@ -159,10 +159,12 @@
       "type": "certification-highlight",
       "custom_css": [
         ".cert-highlight__inner {max-width: 100%;}",
-        ".cert-highlight__left {flex: 0 0 50%;}",
+        ".cert-highlight__left {flex: 0 0 57%;}",
         ".cert-highlight__left .cert-highlight__left-image,.cert-highlight__left .cert-highlight__left-placeholder {max-width: 100%; max-height: 100%; height: 100%; width: 100%;}",
+        ".cert-highlight__right {padding: 40px 60px 40px 0px;}",
         ".cert-highlight__right .cert-highlight__header .cert-highlight__title {max-width: 380px;}",
-        ".cert-highlight__right .cert-highlight__text {max-width: 450px;}"
+        ".cert-highlight__right .cert-highlight__text {max-width: 450px;}",
+        ".section-certification-highlight .cert-highlight svg.cert-highlight__wave{}"
       ],
       "name": "Certification Highlight",
       "settings": {
