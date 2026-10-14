@@ -211,7 +211,11 @@
     width: 68px;
     height: auto;
   }
-
+    @media screen and (max-width: 1200px) {
+      #cert-highlight-{{ section.id }} .cert-highlight__inner {
+        background-size:140px;
+      }
+  }
   @media screen and (max-width: 749px) {
     #cert-highlight-{{ section.id }} .cert-highlight__inner {
       flex-direction: column;
