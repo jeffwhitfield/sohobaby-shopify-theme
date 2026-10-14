@@ -159,7 +159,8 @@
       "type": "certification-highlight",
       "custom_css": [
         ".cert-highlight__inner {max-width: 100%;}",
-        ".cert-highlight__left {flex: 0 0 50%;}"
+        ".cert-highlight__left {flex: 0 0 50%;}",
+        ".cert-highlight__left .cert-highlight__left-image,.cert-highlight__left .cert-highlight__left-placeholder {max-width: 100%; max-height: none;}"
       ],
       "name": "Certification Highlight",
       "settings": {
