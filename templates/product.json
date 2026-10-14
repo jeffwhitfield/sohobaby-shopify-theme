@@ -164,7 +164,7 @@
         ".cert-highlight__right {padding: 40px 60px 40px 0px;}",
         ".cert-highlight__right .cert-highlight__header .cert-highlight__title {max-width: 380px;}",
         ".cert-highlight__right .cert-highlight__text {max-width: 450px;}",
-        ".section-certification-highlight .cert-highlight svg.cert-highlight__wave{}"
+        ".section-certification-highlight svg.cert-highlight__wave {display: none;}"
       ],
       "name": "Certification Highlight",
       "settings": {
