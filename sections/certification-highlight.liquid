@@ -145,7 +145,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 60px;
+    padding: 40px 60px 40px 0px;
   }
 
   #cert-highlight-{{ section.id }} .cert-highlight__header {
@@ -167,12 +167,13 @@
     line-height: 1.25;
     margin: 0;
     font-weight: 500;
+    max-width: 380px;
   }
 
   #cert-highlight-{{ section.id }} .cert-highlight__text {
     font-size: 15px;
     line-height: 1.7;
-    max-width: 520px;
+    max-width: 450px;
     color: currentColor;
     opacity: 0.85;
   }
