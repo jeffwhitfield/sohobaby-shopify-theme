@@ -157,19 +157,11 @@
     },
     "certification_highlight_q4KUtY": {
       "type": "certification-highlight",
-      "custom_css": [
-        ".cert-highlight__inner {max-width: 100%;}",
-        ".cert-highlight__left {flex: 0 0 57%;}",
-        ".cert-highlight__left .cert-highlight__left-image {max-width: 100%; max-height: 100%; height: 100%; width: 100%; object-fit: fill; object-position: right center;}",
-        ".cert-highlight__right {padding: 40px 60px 40px 0px;}",
-        ".cert-highlight__right .cert-highlight__title {max-width: 380px;}",
-        ".cert-highlight__right .cert-highlight__text {max-width: 450px;}",
-        ".section-certification-highlight svg.cert-highlight__wave {display: none;}"
-      ],
+      "custom_css": [],
       "name": "Certification Highlight",
       "settings": {
-        "background_color": "#F0F0F8",
-        "left_color": "#FFFFFF",
+        "background_color": "#f0f0f8",
+        "left_color": "#ffffff",
         "left_image": "shopify://shop_images/Group31.png",
         "title": "Built for the Room That Matters Most",
         "text": "<p>Crafted carefully with your little one in mind, Soho&nbsp;Baby&nbsp;products are designed for safety, comfort, and lasting durability.&nbsp;CPSC and ASTM compliant, our products are tested, trusted, and made to give parents peace of mind.&nbsp;We've been building nurseries for over 35 years because the first room your&nbsp;baby&nbsp;ever knows should be the safest one in the house.</p>",
